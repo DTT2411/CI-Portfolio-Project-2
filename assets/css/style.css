@@ -1,13 +1,13 @@
 /* Google Font import */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Racing+ans+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Orbitron:wght@400..900&display=swap');
 
 /* CSS Variables */
 :root {
-    /* --primary-font: "Racing Sans One", sans-serif; */
-    /* --secondary-font: "Montserrat", cursive; */
-    /* --primary-color: #30528f; /* dark blue */
-    /* --secondary-color: #F5F5FA;  */
-    /* --tertiary-color: #a9aace;  */
+    --primary-font: "Orbitron", sans-serif;
+    --secondary-font: "Jockey One", cursive;
+    --primary-color: #89A894;
+    --secondary-color: #ADFCF9;
+    --tertiary-color: #4B644A;
     /* --highlight-color: #78b131;  */
 }
 
@@ -15,11 +15,43 @@
 
 body {
     font-family: var(--primary-font);
-    /* padding-top: 55px; */
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 
-h1,h2 {
-    /* font-family: var(--primary-font);
-    color: var(--primary-color);
+.container {
+    position: relative;
+    height: 70%;
+    width: 100%;
+    padding: 25px;
+    background-color: var(--secondary-color);
+}
+
+#score-container {
+    width: 150px;
+    margin: auto;
+    position: relative;
+    height: 50px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+button {
+    background-color: var(--primary-color);
+    font-size: 5rem;
+}
+
+h1 {
     text-transform: uppercase; */
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 20%;
+    padding: 20px 0px;
+    background-color: var(--secondary-color)
 }
