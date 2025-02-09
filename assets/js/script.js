@@ -79,9 +79,9 @@ function createComputerChoice() {
  * Updates winning game outcome message and calls the function to increase player score.
  */
 function winGame(playerChoice, computerChoice) {
-    console.log(`${playerChoice} beats ${computerChoice} - you win!`);
-    document.getElementById("game-outcome").textContent = `${playerChoice} beats ${computerChoice} - you win!`;
-    incrementPlayerScore();
+    console.log(`${playerChoice} beats ${computerChoice} - you win!`); // Test console log, delete before submission
+    document.getElementById("game-outcome").textContent = `${playerChoice} beats ${computerChoice} - you win!`; 
+    incrementPlayerScore(); //Calls function to increase player score
     // Testing ways to make the first letter of the winning choice capitalised!?
     // console.log(playerChoice); //logs e.g. "rock"
     // console.log(typeof(playerChoice)); //logs "string"
@@ -97,7 +97,7 @@ function winGame(playerChoice, computerChoice) {
 function loseGame(playerChoice, computerChoice) {
     console.log(`${computerChoice} beats ${playerChoice} - you lose!`);
     document.getElementById("game-outcome").textContent = `${computerChoice} beats ${playerChoice} - you lose!`;
-    incrementComputerScore();
+    incrementComputerScore(); //Calls function to increase computer score
 }
 
 /** 
