@@ -33,6 +33,7 @@ function playGame(playerChoice) {
             console.log("User wins!");
             winGame(playerChoice, computerChoice);
             incrementCurrentWinstreak();
+            checkMaxWinstreak();
             break;
         // Losing Cases
         case "scissorsrock":
@@ -128,6 +129,15 @@ function resetCurrentWinstreak() {
     document.getElementById("current-winstreak").innerText = 0;
 }
 
+/** 
+ * Checks if the current winstreak count is greater than the max winstreak count. 
+ * If yes, it updates the value to current. 
+ */
+function checkMaxWinstreak() {
+    if (document.getElementById("current-winstreak").innerText > document.getElementById("max-winstreak").innerText) {
+        document.getElementById("max-winstreak").innerText = document.getElementById("current-winstreak").innerText;
+    }
+}
 
 
 // function playGame(gameType) {
