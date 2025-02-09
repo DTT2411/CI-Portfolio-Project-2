@@ -97,8 +97,15 @@ function loseGame(playerChoice, computerChoice) {
  * Updates drawn game outcome.
  */
 function drawGame(playerChoice) {
+    // Testing ways to make the first letter of the winning choice capitalised!?
+    // console.log(playerChoice);
+    // console.log(typeof(playerChoice));
+    // console.log(playerChoice[0]);
+    // playerChoice[0].toUpper;
+    // console.log(playerChoice[0]);
+    // console.log(playerChoice);
     console.log(`You both picked ${playerChoice} - it's a draw!`);
-    document.getElementById("game-outcome").textContent = `You both picked ${playerChoice} - it's a draw!`;
+    document.getElementById("game-outcome").textContent = `You both picked ${playerChoice.toUpper()} - it's a draw!`;
 }
 
 /** 
