@@ -30,11 +30,11 @@ function playGame(playerChoice) {
         case "spockrock":
         case "lizardspock":
         case "lizardpaper":
-            console.log("User wins!");
-            winGame(playerChoice, computerChoice);
-            incrementCurrentWinstreak();
-            checkMaxWinstreak();
-            outcomeDisplay(playerChoice, computerChoice);
+            console.log("User wins!"); // Test console log, delete before submission
+            winGame(playerChoice, computerChoice); // Calls the winGame function with populated player & computer choice parameters
+            incrementCurrentWinstreak(); // Calls the function to increase current winstreak by 1
+            checkMaxWinstreak(); // Calls the function to check whether the current winstreak is greater than the previous maximum
+            outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
             break;
         // Losing Cases
         case "scissorsrock":
@@ -47,10 +47,10 @@ function playGame(playerChoice) {
         case "rockspock":
         case "spocklizard":
         case "paperlizard":
-            console.log("User loses!");
-            loseGame(playerChoice, computerChoice);
-            resetCurrentWinstreak();
-            outcomeDisplay(playerChoice, computerChoice);
+            console.log("User loses!"); // Test console log, delete before submission
+            loseGame(playerChoice, computerChoice); // Calls the loseGame function with populated player & computer choice parameters
+            resetCurrentWinstreak(); // Calls the function to reset the winstreak since player lost
+            outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
             break;
         // Drawing Cases 
         case "rockrock":
@@ -58,10 +58,10 @@ function playGame(playerChoice) {
         case "scissorsscissors":
         case "spockspock":
         case "lizardlizard":
-            console.log("Draw!");
-            drawGame(playerChoice, computerChoice);
-            resetCurrentWinstreak();
-            outcomeDisplay(playerChoice, computerChoice);
+            console.log("Draw!"); // Test console log, delete before submission
+            drawGame(playerChoice); // Calls the draw Game function with populated player parameter (only need 1, since both are the same)
+            resetCurrentWinstreak(); // Calls the function to reset the winstreak since player drew
+            outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
             break;
     }  
 }
@@ -70,9 +70,9 @@ function playGame(playerChoice) {
  * Returns a random gesture - the computer's "choice"
  */
 function createComputerChoice() {
-    const choices = ["rock", "paper", "scissors", "spock", "lizard"];
-    let rand = Math.floor(Math.random() * 5);
-    return choices[rand];
+    const choices = ["rock", "paper", "scissors", "spock", "lizard"]; // Sets up the array of possible choices for the computer
+    let rand = Math.floor(Math.random() * 5); // Generates a random number between 0 and 4
+    return choices[rand]; //Returns a random array element
 }
 
 /** 
@@ -83,12 +83,12 @@ function winGame(playerChoice, computerChoice) {
     document.getElementById("game-outcome").textContent = `${playerChoice} beats ${computerChoice} - you win!`;
     incrementPlayerScore();
     // Testing ways to make the first letter of the winning choice capitalised!?
-    console.log(playerChoice); //logs e.g. "rock"
-    console.log(typeof(playerChoice)); //logs "string"
-    console.log(playerChoice[0]); //logs e.g. "r"
-    console.log("test");
-    console.log(playerChoice.toUpper()); //"Uncaught TypeError: playerChoice.toUpper is not a function"
-    console.log("test");
+    // console.log(playerChoice); //logs e.g. "rock"
+    // console.log(typeof(playerChoice)); //logs "string"
+    // console.log(playerChoice[0]); //logs e.g. "r"
+    // console.log("test");
+    // console.log(playerChoice.toUpper()); //"Uncaught TypeError: playerChoice.toUpper is not a function"
+    // console.log("test");
 }
 
 /** 
