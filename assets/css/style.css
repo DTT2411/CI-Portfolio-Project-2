@@ -27,12 +27,6 @@ body {
     background-color: var(--secondary-color);
 }
 
-#score-container {
-    width: 150px;
-    margin: auto;
-    position: relative;
-    height: 50px;
-}
 
 ul {
     list-style-type: none;
@@ -45,7 +39,7 @@ button {
 }
 
 h1 {
-    text-transform: uppercase; */
+    text-transform: uppercase;
 }
 
 /* HEADER */

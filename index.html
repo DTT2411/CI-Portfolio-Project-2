@@ -20,8 +20,10 @@
   </header>
   <section id="game-info" class="container">
     <h2>Description</h2>
-    <p> Description blach blach blahDescription blach blach blahDescription blach blach blahDescription blach blach
-      blahDescription blach blach blah</p>
+    <p>"Rock Paper Scissors Spock Lizard" is an extension of the classic Rock Paper Scissors game. 
+      There are two additional gestures - Spock and Lizard - with their own interactions with the original three gestures.
+      Read the rules below to find out the weaknesses and strengths of each gesture, then click one of the buttons below to start a match against the computer.
+    </p>
     <h2>Rules</h2>
     <ul>
       <li>Rock beats Scissors and Lizard</li>
@@ -38,22 +40,13 @@
       <span id="computer-score">Computer</span>
     </div>
     <div id="button-area">
-      <button id="rock"><i class="fa-regular fa-hand-back-fist"></i></button>
-      <button id="paper"><i class="fa-regular fa-hand"></i></button>
-      <button id="scissors"><i class="fa-regular fa-hand-scissors"></i></button>
-      <button id="spock"><i class="fa-regular fa-hand-spock"></i></button>
-      <button id="lizard"><i class="fa-regular fa-hand-lizard"></i></button>
+      <button id="rock" data-type="rock" name="rock"><i class="fa-regular fa-hand-back-fist"></i></button>
+      <button id="paper" name="paper"><i class="fa-regular fa-hand"></i></button>
+      <button id="scissors" name="scissors"><i class="fa-regular fa-hand-scissors"></i></button>
+      <button id="spock" name="spock"><i class="fa-regular fa-hand-spock"></i></button>
+      <button id="lizard" name="lizard"><i class="fa-regular fa-hand-lizard"></i></button>
     </div>
     <div id="outcome-area">
-      <div id="you">
-        <div id="YourObject"></div>
-        <div class="who">You</div>
-    </div>
-    <div id="result"><p id="who"><p></div>
-    <div id="com">
-        <div id="ComObject"></div>
-        <div class="who">Computer</div>
-    </div>
     </div>
   </section>
 

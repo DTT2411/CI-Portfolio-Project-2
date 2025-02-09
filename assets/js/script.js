@@ -2,6 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function () {
+            let userChoice = this.getAttribute("name");
+            alert(`You decided to play ${userChoice}.`);
+            // if (this.getAttribute("data-type") === "rock") {
+            //     alert("You clicked rock");
+            // } else if (this.getAttribute("id") === "paper") {
+            //     alert("You clicked paper");
+            // } else if (this.getAttribute("id") === "scissors") {
+            //     alert("You clicked scissors");
+            // } else if (this.getAttribute("id") === "spock") {
+            //     alert("You clicked spock");
+            // } else if (this.getAttribute("id") === "lizard") {
+            //     alert("You clicked lizard");
+            // }
             playGame();
         })
     }
