@@ -83,15 +83,12 @@ function winGame(playerChoice, computerChoice) {
     document.getElementById("game-outcome").textContent = `${playerChoice} beats ${computerChoice} - you win!`;
     incrementPlayerScore();
     // Testing ways to make the first letter of the winning choice capitalised!?
-    console.log(playerChoice);
-    console.log(typeof(playerChoice));
-    console.log(playerChoice[0]);
+    console.log(playerChoice); //logs e.g. "rock"
+    console.log(typeof(playerChoice)); //logs "string"
+    console.log(playerChoice[0]); //logs e.g. "r"
     console.log("test");
-    console.log(playerChoice.toUpper());
+    console.log(playerChoice.toUpper()); //"Uncaught TypeError: playerChoice.toUpper is not a function"
     console.log("test");
-    // playerChoice[0].toUpper;
-    // console.log(playerChoice[0]);
-    // console.log(playerChoice);
 }
 
 /** 
