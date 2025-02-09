@@ -192,6 +192,7 @@ function incrementStats(playerChoice) {
 
 /** 
  * Displays the choices for both player and computer in the square boxes.
+ * In each case, the icon representing the choice is inserted into the square div elements.
  */
 function outcomeDisplay(playerChoice, computerChoice) {
     switch (playerChoice) {
