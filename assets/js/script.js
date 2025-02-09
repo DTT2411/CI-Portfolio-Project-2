@@ -45,6 +45,7 @@ function playGame(playerChoice) {
         case "lizardpaper":
             console.log("User wins!");
             winGame(playerChoice, computerChoice);
+            incrementCurrentWinstreak();
             break;
         // Losing Cases
         case "scissorsrock":
@@ -59,6 +60,7 @@ function playGame(playerChoice) {
         case "paperlizard":
             console.log("User loses!");
             loseGame(playerChoice, computerChoice);
+            resetCurrentWinstreak();
             break;
         // Drawing Cases 
         case "rockrock":
@@ -68,6 +70,7 @@ function playGame(playerChoice) {
         case "lizardlizard":
             console.log("Draw!");
             drawGame(playerChoice, computerChoice);
+            resetCurrentWinstreak();
             break
     }   
 }
@@ -123,6 +126,20 @@ function incrementComputerScore() {
     document.getElementById("computer-score").innerText = ++oldScore;
 }
 
+/** 
+ * Adds one to the winstreak counter.
+ */
+function incrementCurrentWinstreak() {
+    let oldScore = parseInt(document.getElementById("current-winstreak").innerText);
+    document.getElementById("current-winstreak").innerText = ++oldScore;
+}
+
+/** 
+ * Resets the winstreak counter back to 0.
+ */
+function resetCurrentWinstreak() {
+    document.getElementById("current-winstreak").innerText = 0;
+}
 
 
 
