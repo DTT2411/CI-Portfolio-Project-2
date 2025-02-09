@@ -18,7 +18,7 @@
   <header class="header text-center">
     <h1>Rock Paper Scissors Spock Lizard</h1>
   </header>
-  <section id="game-info" class="container">
+  <section id="game-info" class="container text-md-start text-center">
     <h2>Description</h2>
     <p>"Rock Paper Scissors Spock Lizard" is an extension of the classic Rock Paper Scissors game. 
       There are two additional gestures - Spock and Lizard - with their own interactions with the original three gestures.
@@ -34,7 +34,7 @@
     </ul>
   </section>
 
-  <section id="game-area" class="container">
+  <section id="game-area" class="container text-md-start text-center">
 
     <div id="score-area" class="text-center">
       <div id="player-label" class="label">Player</div>
@@ -62,12 +62,15 @@
 
   </section>
 
-  <section id="stats-area" class="container">
+  <section id="stats-area" class="container text-md-start text-center">
     <h2>Stats</h2>
-    <div id="current-winstreak-label" class="label">Current win-streak: </div>
-    <span id="current-winstreak">0</span>
-    <div id="max-winstreak-label" class="label">Max win-streak: </div>
-    <span id="max-winstreak">0</span>
+    <div id="current-winstreak-label" class="label">Current win-streak: <span id="current-winstreak">0</span></div>
+    <div id="max-winstreak-label" class="label">Max win-streak: <span id="max-winstreak">0</span></div>
+    <div id="rock-wins-label" class="label">Wins with rock: <span id="rock-wins">0</span></div>
+    <div id="paper-wins-label" class="label">Wins with paper: <span id="paper-wins">0</span></div>
+    <div id="scissors-wins-label" class="label">Wins with scissors: <span id="scissors-wins">0</span></div>
+    <div id="spock-wins-label" class="label">Wins with spock: <span id="spock-wins">0</span></div>
+    <div id="lizard-wins-label" class="label">Wins with lizard: <span id="lizard-wins">0</span></div>
   </section>
 
   <!-- Bootstrap JS -->
