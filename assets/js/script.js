@@ -35,6 +35,8 @@ function playGame(playerChoice) {
             incrementCurrentWinstreak(); // Calls the function to increase current winstreak by 1
             checkMaxWinstreak(); // Calls the function to check whether the current winstreak is greater than the previous maximum
             outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
+            incrementStats(playerChoice);
+            incrementTotalGames();
             break;
         // Losing Cases
         case "scissorsrock":
@@ -51,6 +53,7 @@ function playGame(playerChoice) {
             loseGame(playerChoice, computerChoice); // Calls the loseGame function with populated player & computer choice parameters
             resetCurrentWinstreak(); // Calls the function to reset the winstreak since player lost
             outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
+            incrementTotalGames();
             break;
         // Drawing Cases 
         case "rockrock":
@@ -62,6 +65,7 @@ function playGame(playerChoice) {
             drawGame(playerChoice); // Calls the draw Game function with populated player parameter (only need 1, since both are the same)
             resetCurrentWinstreak(); // Calls the function to reset the winstreak since player drew
             outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
+            incrementTotalGames();
             break;
     }  
 }
@@ -82,6 +86,7 @@ function winGame(playerChoice, computerChoice) {
     console.log(`${playerChoice} beats ${computerChoice} - you win!`); // Test console log, delete before submission
     document.getElementById("game-outcome").textContent = `${playerChoice} beats ${computerChoice} - you win!`; 
     incrementPlayerScore(); //Calls function to increase player score
+
     // Testing ways to make the first letter of the winning choice capitalised!?
     // console.log(playerChoice); //logs e.g. "rock"
     // console.log(typeof(playerChoice)); //logs "string"
@@ -132,6 +137,11 @@ function incrementCurrentWinstreak() {
     document.getElementById("current-winstreak").innerText = ++oldScore;
 }
 
+function incrementTotalGames() {
+    let oldTotal = parseInt(document.getElementById("total-games").innerText);
+    document.getElementById("total-games").innerText = ++oldTotal;
+}
+
 /** 
  * Resets the winstreak counter back to 0.
  */
@@ -146,6 +156,37 @@ function resetCurrentWinstreak() {
 function checkMaxWinstreak() {
     if (document.getElementById("current-winstreak").innerText > document.getElementById("max-winstreak").innerText) {
         document.getElementById("max-winstreak").innerText = document.getElementById("current-winstreak").innerText;
+    }
+}
+
+/** 
+ * Increments the numbers in the stats area depending on which gesture the player won with.
+ */
+function incrementStats(playerChoice) {
+    switch(playerChoice) {
+        case "rock":
+            let oldRockScore = parseInt(document.getElementById("rock-wins").innerText);
+            // let rockWinRate = (oldRockScore + 1) / (parseInt(document.getElementById("total-games").innerText))
+            document.getElementById("rock-wins").innerText = ++oldRockScore // + "   " + rockWinRate;
+            // console.log(oldRockScore);
+            // console.log(rockWinRate);
+            break;
+        case "paper":
+            let oldPaperScore = parseInt(document.getElementById("paper-wins").innerText);
+            document.getElementById("paper-wins").innerText = ++oldPaperScore;
+            break;
+        case "scissors":
+            let oldScissorsScore = parseInt(document.getElementById("scissors-wins").innerText);
+            document.getElementById("scissors-wins").innerText = ++oldScissorsScore;
+            break;
+        case "spock":
+            let oldSpockScore = parseInt(document.getElementById("spock-wins").innerText);
+            document.getElementById("spock-wins").innerText = ++oldSpockScore;
+            break;
+        case "lizard":
+            let oldLizardScore = parseInt(document.getElementById("lizard-wins").innerText);
+            document.getElementById("lizard-wins").innerText = ++oldLizardScore;
+            break;
     }
 }
 
