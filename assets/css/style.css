@@ -1,0 +1,25 @@
+/* Google Font import */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Racing+ans+One&display=swap'); */
+
+/* CSS Variables */
+:root {
+    /* --primary-font: "Racing Sans One", sans-serif; */
+    /* --secondary-font: "Montserrat", cursive; */
+    /* --primary-color: #30528f; /* dark blue */
+    /* --secondary-color: #F5F5FA;  */
+    /* --tertiary-color: #a9aace;  */
+    /* --highlight-color: #78b131;  */
+}
+
+/* GLOBAL STYLES */
+
+body {
+    font-family: var(--primary-font);
+    /* padding-top: 55px; */
+}
+
+h1,h2 {
+    /* font-family: var(--primary-font);
+    color: var(--primary-color);
+    text-transform: uppercase; */
+}
