@@ -23,7 +23,7 @@ function playGame(playerChoice) {
         case "rockscissors":
         case "rocklizard":
         case "scissorspaper":
-        case "scissorlizard":
+        case "scissorslizard":
         case "paperrock":
         case "paperspock":
         case "spockscissors":
@@ -34,6 +34,7 @@ function playGame(playerChoice) {
             winGame(playerChoice, computerChoice);
             incrementCurrentWinstreak();
             checkMaxWinstreak();
+            outcomeDisplay(playerChoice, computerChoice);
             break;
         // Losing Cases
         case "scissorsrock":
@@ -49,6 +50,7 @@ function playGame(playerChoice) {
             console.log("User loses!");
             loseGame(playerChoice, computerChoice);
             resetCurrentWinstreak();
+            outcomeDisplay(playerChoice, computerChoice);
             break;
         // Drawing Cases 
         case "rockrock":
@@ -59,8 +61,9 @@ function playGame(playerChoice) {
             console.log("Draw!");
             drawGame(playerChoice, computerChoice);
             resetCurrentWinstreak();
-            break
-    }   
+            outcomeDisplay(playerChoice, computerChoice);
+            break;
+    }  
 }
 
 /** 
@@ -136,6 +139,46 @@ function resetCurrentWinstreak() {
 function checkMaxWinstreak() {
     if (document.getElementById("current-winstreak").innerText > document.getElementById("max-winstreak").innerText) {
         document.getElementById("max-winstreak").innerText = document.getElementById("current-winstreak").innerText;
+    }
+}
+
+/** 
+ * Displays the choices for both player and computer in the square boxes.
+ */
+function outcomeDisplay(playerChoice, computerChoice) {
+    switch (playerChoice) {
+        case "rock":
+            document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
+            break;
+        case "paper":
+            document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand"></i>';
+            break;
+        case "scissors":
+            document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-scissors"></i>';
+            break;
+        case "spock":
+            document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-spock"></i>';
+            break;
+        case "lizard":
+            document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
+            break;
+    }
+    switch (computerChoice) {
+        case "rock":
+            document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
+            break;
+        case "paper":
+            document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand"></i>';
+            break;
+        case "scissors":
+            document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-scissors"></i>';
+            break;
+        case "spock":
+            document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-spock"></i>';
+            break;
+        case "lizard":
+            document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
+            break;
     }
 }
 
