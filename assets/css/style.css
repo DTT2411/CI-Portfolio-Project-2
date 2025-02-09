@@ -91,6 +91,13 @@ header {
     margin-top: 20px;
 }
 
+.outcome {
+    width: 250px;
+    height: 250px;
+    border: 5px solid #4B644A;
+    display: inline-block;
+}
+
 /* GAME AREA */
 #call-to-action {
     margin-top: 20px;
