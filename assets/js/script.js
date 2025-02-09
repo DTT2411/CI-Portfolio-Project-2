@@ -11,20 +11,21 @@
 // const spock_button = document.getElementById("spock");
 // const lizard_button = document.getElementById("lizard");
 
-// Adds event listeners to game buttons
+// Adds event listeners to game buttons upon DOM loading.
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
         button.addEventListener("click", function () {
-            let playerChoice = this.getAttribute("name");
-            // alert(`You decided to play ${playerChoice}.`);
-            // console.log(playerChoice);
-            // console.log(createComputerChoice());
+            let playerChoice = this.getAttribute("id");
             playGame(playerChoice);
         })
     }
 })
 
+/** 
+ * The main game "loop", called when the script is first loaded
+  and after the user clicks a button to initiate a game.
+ */
 function playGame(playerChoice) {
     const computerChoice = createComputerChoice();
     console.log("Player Choice: " + playerChoice);
@@ -69,42 +70,54 @@ function playGame(playerChoice) {
             drawGame(playerChoice, computerChoice);
             break
     }   
-    // const choices = ["rock", "paper", "scissors", "spock", "lizard"];
-    // let playerPoints = 0;
-    // let computerPoints = 0;
-    // let rand = Math.floor(Math.random() * 5);
-    // let computerChoice = choices[rand];
-    // console.log(computerChoice); 
 }
 
+/** 
+ * Returns a random gesture - the computer's "choice"
+ */
 function createComputerChoice() {
     const choices = ["rock", "paper", "scissors", "spock", "lizard"];
     let rand = Math.floor(Math.random() * 5);
     return choices[rand];
 }
 
+/** 
+ * Updates winning game outcome message and calls the function to increase player score.
+ */
 function winGame(playerChoice, computerChoice) {
     console.log(`${playerChoice} beats ${computerChoice} - you win!`);
     document.getElementById("game-outcome").textContent = `${playerChoice} beats ${computerChoice} - you win!`;
     incrementPlayerScore();
 }
 
+/** 
+ * Updates losing game outcome message and calls the function to increase computer score.
+ */
 function loseGame(playerChoice, computerChoice) {
     console.log(`${computerChoice} beats ${playerChoice} - you lose!`);
     document.getElementById("game-outcome").textContent = `${computerChoice} beats ${playerChoice} - you lose!`;
     incrementComputerScore();
 }
 
+/** 
+ * Updates drawn game outcome.
+ */
 function drawGame(playerChoice) {
     console.log(`You both picked ${playerChoice} - it's a draw!`);
     document.getElementById("game-outcome").textContent = `You both picked ${playerChoice} - it's a draw!`;
 }
 
+/** 
+ * Adds one to the player's displayed score.
+ */
 function incrementPlayerScore() {
     let oldScore = parseInt(document.getElementById("player-score").innerText);
     document.getElementById("player-score").innerText = ++oldScore;
 }
 
+/** 
+ * Adds one to the computer's displayed score.
+ */
 function incrementComputerScore() {
     let oldScore = parseInt(document.getElementById("computer-score").innerText);
     document.getElementById("computer-score").innerText = ++oldScore;
@@ -112,9 +125,7 @@ function incrementComputerScore() {
 
 
 
-/* The main game "loop", called when the script is first loaded
-* and after the user's answer has been processed
-*/
+
 // function playGame(gameType) {
 
 //    // Clears answer box after submit button is clicked
