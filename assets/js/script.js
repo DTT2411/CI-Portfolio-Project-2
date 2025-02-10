@@ -180,7 +180,9 @@ function checkMaxWinstreak() {
 function calculateWinrate() {
     let totalGames = parseInt(document.getElementById("total-games").innerText);
     let totalWinrate = parseInt(document.getElementById("player-score").innerText) / totalGames; // Calculates winrate by reading total game & player score from DOM
-    document.getElementById("total-winrate").innerText = (totalWinrate.toFixed(2)*100) + "%";
+    // Rounds winrate to the nearest percentage
+    let roundedTotalWinrate = Math.round(totalWinrate*100);
+    document.getElementById("total-winrate").innerText = roundedTotalWinrate + "%";
 }
 
 /** 
