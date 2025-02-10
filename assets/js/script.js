@@ -36,7 +36,8 @@ function playGame(playerChoice) {
             checkMaxWinstreak(); // Calls the function to check whether the current winstreak is greater than the previous maximum
             outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
             incrementStats(playerChoice);
-            incrementTotalGames();
+            // incrementTotalGames();
+            incrementTotalGames("win");
             calculateWinrate();
             break;
         // Losing Cases
@@ -54,7 +55,7 @@ function playGame(playerChoice) {
             loseGame(playerChoice, computerChoice); // Calls the loseGame function with populated player & computer choice parameters
             resetCurrentWinstreak(); // Calls the function to reset the winstreak since player lost
             outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
-            incrementTotalGames();
+            incrementTotalGames("loss");
             calculateWinrate();
             break;
         // Drawing Cases 
@@ -67,7 +68,7 @@ function playGame(playerChoice) {
             drawGame(playerChoice); // Calls the draw Game function with populated player parameter (only need 1, since both are the same)
             resetCurrentWinstreak(); // Calls the function to reset the winstreak since player drew
             outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
-            incrementTotalGames();
+            incrementTotalGames("draw");
             calculateWinrate();
             break;
     }  
@@ -141,9 +142,19 @@ function incrementCurrentWinstreak() {
 /** 
  * Adds one to the total games counter.
  */
-function incrementTotalGames() {
+function incrementTotalGames(outcome) {
     let oldTotal = parseInt(document.getElementById("total-games").innerText);
     document.getElementById("total-games").innerText = ++oldTotal; 
+    if (outcome === "win") {
+        let oldWinTotal = parseInt(document.getElementById("total-wins").innerText);
+        document.getElementById("total-wins").innerText = ++oldWinTotal; 
+    } else if (outcome === "loss") {
+        let oldLossTotal = parseInt(document.getElementById("total-losses").innerText);
+        document.getElementById("total-losses").innerText = ++oldLossTotal; 
+    } else {
+        let oldDrawTotal = parseInt(document.getElementById("total-draws").innerText);
+        document.getElementById("total-draws").innerText = ++oldDrawTotal; 
+    }
 }
 
 /** 
@@ -239,40 +250,4 @@ function outcomeDisplay(playerChoice, computerChoice) {
             document.getElementById("computer-choice-icon").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
             break;
     }
-
-
-    // switch (playerChoice) {
-    //     case "rock":
-    //         document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
-    //         break;
-    //     case "paper":
-    //         document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand"></i>';
-    //         break;
-    //     case "scissors":
-    //         document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-scissors"></i>';
-    //         break;
-    //     case "spock":
-    //         document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-spock"></i>';
-    //         break;
-    //     case "lizard":
-    //         document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
-    //         break;
-    // }
-    // switch (computerChoice) {
-    //     case "rock":
-    //         document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
-    //         break;
-    //     case "paper":
-    //         document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand"></i>';
-    //         break;
-    //     case "scissors":
-    //         document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-scissors"></i>';
-    //         break;
-    //     case "spock":
-    //         document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-spock"></i>';
-    //         break;
-    //     case "lizard":
-    //         document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
-    //         break;
-    // }
 }
