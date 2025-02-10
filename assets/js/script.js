@@ -101,7 +101,7 @@ function winGame(playerChoice, computerChoice) {
  */
 function loseGame(playerChoice, computerChoice) {
     console.log(`${computerChoice} beats ${playerChoice} - you lose!`);
-    document.getElementById("game-outcome").textContent = `${computerChoice} beats ${playerChoice} - you lose!`;
+    document.getElementById("game-outcome").textContent = `${playerChoice} is beaten by ${computerChoice} - you lose!`;
     incrementComputerScore(); //Calls function to increase computer score
 }
 
@@ -139,7 +139,13 @@ function incrementCurrentWinstreak() {
 
 function incrementTotalGames() {
     let oldTotal = parseInt(document.getElementById("total-games").innerText);
-    document.getElementById("total-games").innerText = ++oldTotal;
+    // Calculates total winrate
+    let totalWinrate = parseInt(document.getElementById("player-score").innerText) / (++oldTotal);
+    document.getElementById("total-games").innerText = oldTotal + " " + (totalWinrate.toFixed(2)*100) + "%"; 
+    // Test logs
+    // console.log(parseInt(document.getElementById("player-score").innerText))
+    // console.log(oldTotal);
+    // console.log(totalWinrate);
 }
 
 /** 
