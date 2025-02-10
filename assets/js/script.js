@@ -87,16 +87,11 @@ function createComputerChoice() {
  */
 function winGame(playerChoice, computerChoice) {
     console.log(`${playerChoice} beats ${computerChoice} - you win!`); // Test console log, delete before submission
-    document.getElementById("game-outcome").textContent = `${playerChoice} beats ${computerChoice} - you win!`; 
+    // Capitalises the first letter of the players choice since this will always be the first letter of the outcome message in a won or lost game
+    let playerChoiceCapitalised = playerChoice[0].toUpperCase() + playerChoice.slice(1,); 
+    // console.log(playerChoiceCapitalised); // Test log, delete before submission
+    document.getElementById("game-outcome").textContent = `${playerChoiceCapitalised} beats ${computerChoice} - you win!`; 
     incrementPlayerScore(); //Calls function to increase player score
-
-    // Testing ways to make the first letter of the winning choice capitalised!?
-    // console.log(playerChoice); //logs e.g. "rock"
-    // console.log(typeof(playerChoice)); //logs "string"
-    // console.log(playerChoice[0]); //logs e.g. "r"
-    // console.log("test");
-    // console.log(playerChoice.toUpper()); //"Uncaught TypeError: playerChoice.toUpper is not a function"
-    // console.log("test");
 }
 
 /** 
@@ -104,7 +99,10 @@ function winGame(playerChoice, computerChoice) {
  */
 function loseGame(playerChoice, computerChoice) {
     console.log(`${computerChoice} beats ${playerChoice} - you lose!`);
-    document.getElementById("game-outcome").textContent = `${playerChoice} is beaten by ${computerChoice} - you lose!`;
+    // Capitalises the first letter of the players choice since this will always be the first letter of the outcome message in a won or lost game
+    let playerChoiceCapitalised = playerChoice[0].toUpperCase() + playerChoice.slice(1,); 
+    // console.log(playerChoiceCapitalised); // Test log, delete before submission
+    document.getElementById("game-outcome").textContent = `${playerChoiceCapitalised} is beaten by ${computerChoice} - you lose!`;
     incrementComputerScore(); //Calls function to increase computer score
 }
 
