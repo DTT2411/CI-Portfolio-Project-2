@@ -140,7 +140,7 @@ function incrementCurrentWinstreak() {
 }
 
 /** 
- * Adds one to the total games counter.
+ * Increments the game counters for total, won, lost and drawn games depending on outcome.
  */
 function incrementTotalGames(outcome) {
     let oldTotal = parseInt(document.getElementById("total-games").innerText);
