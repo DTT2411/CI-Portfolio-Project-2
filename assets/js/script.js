@@ -98,7 +98,7 @@ function winGame(playerChoice, computerChoice) {
  */
 function loseGame(playerChoice, computerChoice) {
     console.log(`${computerChoice} beats ${playerChoice} - you lose!`);
-    // Capitalises the first letter of the players choice since this will always be the first letter of the outcome message in a won or lost game
+    // Creates a new string with capitalised first letter to display as the first word in the outcome message
     let playerChoiceCapitalised = playerChoice[0].toUpperCase() + playerChoice.slice(1,); 
     // console.log(playerChoiceCapitalised); // Test log, delete before submission
     document.getElementById("game-outcome").textContent = `${playerChoiceCapitalised} is beaten by ${computerChoice} - you lose!`;
