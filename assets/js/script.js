@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 /** 
- * The main game "loop", called when the script is first loaded
-  and after the user clicks a button to initiate a game.
+ * The main game "loop", called when the user clicks a button to initiate a game.
  */
 function playGame(playerChoice) {
     const computerChoice = createComputerChoice();
@@ -36,7 +35,6 @@ function playGame(playerChoice) {
             checkMaxWinstreak(); // Calls the function to check whether the current winstreak is greater than the previous maximum
             outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
             incrementStats(playerChoice);
-            // incrementTotalGames();
             incrementTotalGames("win");
             calculateWinrate();
             break;
@@ -88,7 +86,7 @@ function createComputerChoice() {
  */
 function winGame(playerChoice, computerChoice) {
     console.log(`${playerChoice} beats ${computerChoice} - you win!`); // Test console log, delete before submission
-    // Capitalises the first letter of the players choice since this will always be the first letter of the outcome message in a won or lost game
+    // Creates a new string with capitalised first letter to display as the first word in the outcome message
     let playerChoiceCapitalised = playerChoice[0].toUpperCase() + playerChoice.slice(1,); 
     // console.log(playerChoiceCapitalised); // Test log, delete before submission
     document.getElementById("game-outcome").textContent = `${playerChoiceCapitalised} beats ${computerChoice} - you win!`; 
