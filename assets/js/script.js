@@ -138,9 +138,12 @@ function incrementCurrentWinstreak() {
     document.getElementById("current-winstreak").innerText = ++oldScore;
 }
 
+/** 
+ * Adds one to the total games counter.
+ */
 function incrementTotalGames() {
     let oldTotal = parseInt(document.getElementById("total-games").innerText);
-    document.getElementById("total-games").innerText = ++oldTotal; //+ " " + (totalWinrate.toFixed(2)*100) + "%"; 
+    document.getElementById("total-games").innerText = ++oldTotal; 
 }
 
 /** 
@@ -204,36 +207,72 @@ function incrementStats(playerChoice) {
 function outcomeDisplay(playerChoice, computerChoice) {
     switch (playerChoice) {
         case "rock":
-            document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
+            document.getElementById("player-choice-icon").innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
             break;
         case "paper":
-            document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand"></i>';
+            document.getElementById("player-choice-icon").innerHTML = '<i class="fa-regular fa-hand"></i>';
             break;
         case "scissors":
-            document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-scissors"></i>';
+            document.getElementById("player-choice-icon").innerHTML = '<i class="fa-regular fa-hand-scissors"></i>';
             break;
         case "spock":
-            document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-spock"></i>';
+            document.getElementById("player-choice-icon").innerHTML = '<i class="fa-regular fa-hand-spock"></i>';
             break;
         case "lizard":
-            document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
+            document.getElementById("player-choice-icon").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
             break;
     }
     switch (computerChoice) {
         case "rock":
-            document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
+            document.getElementById("computer-choice-icon").innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
             break;
         case "paper":
-            document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand"></i>';
+            document.getElementById("computer-choice-icon").innerHTML = '<i class="fa-regular fa-hand"></i>';
             break;
         case "scissors":
-            document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-scissors"></i>';
+            document.getElementById("computer-choice-icon").innerHTML = '<i class="fa-regular fa-hand-scissors"></i>';
             break;
         case "spock":
-            document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-spock"></i>';
+            document.getElementById("computer-choice-icon").innerHTML = '<i class="fa-regular fa-hand-spock"></i>';
             break;
         case "lizard":
-            document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
+            document.getElementById("computer-choice-icon").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
             break;
     }
+
+
+    // switch (playerChoice) {
+    //     case "rock":
+    //         document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
+    //         break;
+    //     case "paper":
+    //         document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand"></i>';
+    //         break;
+    //     case "scissors":
+    //         document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-scissors"></i>';
+    //         break;
+    //     case "spock":
+    //         document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-spock"></i>';
+    //         break;
+    //     case "lizard":
+    //         document.getElementById("player-choice").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
+    //         break;
+    // }
+    // switch (computerChoice) {
+    //     case "rock":
+    //         document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-back-fist"></i>';
+    //         break;
+    //     case "paper":
+    //         document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand"></i>';
+    //         break;
+    //     case "scissors":
+    //         document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-scissors"></i>';
+    //         break;
+    //     case "spock":
+    //         document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-spock"></i>';
+    //         break;
+    //     case "lizard":
+    //         document.getElementById("computer-choice").innerHTML = '<i class="fa-regular fa-hand-lizard"></i>';
+    //         break;
+    // }
 }

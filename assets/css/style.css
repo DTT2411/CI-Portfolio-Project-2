@@ -97,9 +97,9 @@ header {
     display: inline-block;
 }
 
-#player-choice, 
-#computer-choice {
-    font-size: 10rem;
+#player-choice-icon, 
+#computer-choice-icon {
+    font-size: 8rem;
 }
 
 /* GAME AREA */
