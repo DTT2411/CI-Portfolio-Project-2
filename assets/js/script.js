@@ -37,6 +37,7 @@ function playGame(playerChoice) {
             outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
             incrementStats(playerChoice);
             incrementTotalGames();
+            calculateWinrate();
             break;
         // Losing Cases
         case "scissorsrock":
@@ -54,6 +55,7 @@ function playGame(playerChoice) {
             resetCurrentWinstreak(); // Calls the function to reset the winstreak since player lost
             outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
             incrementTotalGames();
+            calculateWinrate();
             break;
         // Drawing Cases 
         case "rockrock":
@@ -66,6 +68,7 @@ function playGame(playerChoice) {
             resetCurrentWinstreak(); // Calls the function to reset the winstreak since player drew
             outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
             incrementTotalGames();
+            calculateWinrate();
             break;
     }  
 }
@@ -139,13 +142,7 @@ function incrementCurrentWinstreak() {
 
 function incrementTotalGames() {
     let oldTotal = parseInt(document.getElementById("total-games").innerText);
-    // Calculates total winrate
-    let totalWinrate = parseInt(document.getElementById("player-score").innerText) / (++oldTotal);
-    document.getElementById("total-games").innerText = oldTotal + " " + (totalWinrate.toFixed(2)*100) + "%"; 
-    // Test logs
-    // console.log(parseInt(document.getElementById("player-score").innerText))
-    // console.log(oldTotal);
-    // console.log(totalWinrate);
+    document.getElementById("total-games").innerText = ++oldTotal; //+ " " + (totalWinrate.toFixed(2)*100) + "%"; 
 }
 
 /** 
@@ -166,16 +163,22 @@ function checkMaxWinstreak() {
 }
 
 /** 
+ * Calculates the player's overall winrate and feeds this into the relevant row in the stats table.
+ */
+function calculateWinrate() {
+    let totalGames = parseInt(document.getElementById("total-games").innerText);
+    let totalWinrate = parseInt(document.getElementById("player-score").innerText) / totalGames; // Calculates winrate by reading total game & player score from DOM
+    document.getElementById("total-winrate").innerText = (totalWinrate.toFixed(2)*100) + "%";
+}
+
+/** 
  * Increments the numbers in the stats area depending on which gesture the player won with.
  */
 function incrementStats(playerChoice) {
     switch(playerChoice) {
         case "rock":
             let oldRockScore = parseInt(document.getElementById("rock-wins").innerText);
-            // let rockWinRate = (oldRockScore + 1) / (parseInt(document.getElementById("total-games").innerText))
-            document.getElementById("rock-wins").innerText = ++oldRockScore // + "   " + rockWinRate;
-            // console.log(oldRockScore);
-            // console.log(rockWinRate);
+            document.getElementById("rock-wins").innerText = ++oldRockScore;
             break;
         case "paper":
             let oldPaperScore = parseInt(document.getElementById("paper-wins").innerText);
@@ -236,29 +239,3 @@ function outcomeDisplay(playerChoice, computerChoice) {
             break;
     }
 }
-
-
-// function playGame(gameType) {
-
-//    // Clears answer box after submit button is clicked
-//    document.getElementById("answer-box").value = "";
-
-//    // Focuses cursor in answer box when page opens and after submitting
-//    document.getElementById("answer-box").focus();
-
-//    // Creates a random number between 1 and 5
-//    let num1 = Math.floor(Math.random() * 5) + 1;
-
-//    if (gameType === "addition") {
-//        displayAdditionQuestion(num1, num2);
-//    } else if (gameType === "multiply") {
-//        displayMultiplyQuestion(num1, num2);
-//    } else if (gameType === "subtract") {
-//        displaySubtractQuestion(num1, num2);
-//    } else if (gameType === "division") {
-//        displayDivisionQuestion(num1, num2);
-//    } else {
-//        alert(`Unknown game type: ${gameType}`);
-//        throw(`Unknown game type: ${gameType}. Aborting!`);
-//    }
-// }
