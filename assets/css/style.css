@@ -43,10 +43,6 @@ button {
     color: var(--secondary-color);
 }
 
-/* button:hover {
-    background-color: #89A894;
-} */
-
 h1 {
     text-transform: uppercase;
 }
