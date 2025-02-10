@@ -30,21 +30,22 @@ body {
     background-color: var(--secondary-color);
 }
 
-
+/* Removes default bullet points and padding from list items */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+
 button {
     background-color: var(--primary-color);
-    font-size: 5rem;
+    font-size: 5rem; 
     color: var(--secondary-color);
 }
 
-button:hover {
+/* button:hover {
     background-color: #89A894;
-}
+} */
 
 h1 {
     text-transform: uppercase;
@@ -73,12 +74,14 @@ header {
     font-size: 1rem;
 }
 
+/* positions the player score label within the respective div */
 #player-label {
     position: absolute;
     top: 22px;
     left: 30px;
 }
 
+/* positions the computer score label within the respective div */
 #computer-label {
     position: absolute;
     top: 22px;
