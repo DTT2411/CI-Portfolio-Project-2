@@ -20,6 +20,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 10px;
 }
 
 .container {
@@ -59,9 +60,9 @@ header {
 /* SCORE AREA */
 #score-area {
     border: 5px double var(--primary-color);
-    width: 300px;
+    width: 250px;
     margin: auto;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 15px;
     position: relative;
 }
@@ -73,15 +74,15 @@ header {
 /* positions the player score label within the respective div */
 #player-label {
     position: absolute;
-    top: 22px;
-    left: 30px;
+    top: 15px;
+    left: 25px;
 }
 
 /* positions the computer score label within the respective div */
 #computer-label {
     position: absolute;
-    top: 22px;
-    right: 7px;
+    top: 15px;
+    right: 4px;
 }
 
 /* OUTCOME AREA */
@@ -115,4 +116,30 @@ header {
 
 .choice:hover {
     background-color:#4B644A;
+}
+
+/* MEDIA QUERIES */
+
+/* Styles for small (576px) and up */
+@media screen and (min-width: 576px) {
+
+    #score-area {
+        width: 300px;
+        font-size: 1.5rem;
+    }
+
+    /* positions the player score label within the respective div */
+    #player-label {
+        position: absolute;
+        top: 22px;
+        left: 30px;
+    }
+
+    /* positions the computer score label within the respective div */
+    #computer-label {
+        position: absolute;
+        top: 22px;
+        right: 7px;
+}
+
 }
