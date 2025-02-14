@@ -20,7 +20,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 0.8rem;
 }
 
 .container {
@@ -112,8 +112,9 @@ header {
 }
 
 .choice {
-    margin: 20px 5px;
+    margin: 10px 5px;
     padding: 15px;
+    font-size: 3.5rem;
 }
 
 .choice:hover {
@@ -127,7 +128,7 @@ header {
 
     /* Makes body text larger above mobile screen size */
     body {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     /* Slightly widens the score display box on larger screens */
@@ -158,14 +159,16 @@ header {
     .outcome {
         width: 250px;
         height: 250px;
-        border: 5px solid #4B644A;
-        display: inline-block;
-        margin-left: 20px;
+        margin-left: none;
     }
 
     #player-choice-icon, 
     #computer-choice-icon {
         font-size: 8rem;
+    }
+
+    .choice {
+        font-size: 5rem;
     }
 
 }
