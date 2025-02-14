@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
  * The main game "loop", called when the user clicks a button to initiate a game.
  */
 function playGame(playerChoice) {
-    const computerChoice = createComputerChoice();
-    console.log("Player Choice: " + playerChoice);
-    console.log("Computer Choice: " + computerChoice);
+    const computerChoice = createComputerChoice(); 
+    console.log("Player Choice: " + playerChoice); // Test console log, delete before submission
+    console.log("Computer Choice: " + computerChoice); // Test console log, delete before submission
     let winningCases = ["rockscissors","rocklizard","scissorspaper","scissorslizard","paperrock","paperspock","spockscissors","spockrock","lizardspock","lizardpaper"];
     let losingCases = ["scissorsrock","lizardrock","paperscissors","lizardscissors","rockpaper","spockpaper","scissorsspock","rockspock","spocklizard","paperlizard"];
     // The following if-else statements compare the combined string of player & computer choices with the above arrays to determine the game outcome
