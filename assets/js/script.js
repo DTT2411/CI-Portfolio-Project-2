@@ -16,60 +16,28 @@ function playGame(playerChoice) {
     const computerChoice = createComputerChoice();
     console.log("Player Choice: " + playerChoice);
     console.log("Computer Choice: " + computerChoice);
-    // Switch statement combines both parameters into one string to check outcome
-    switch(playerChoice + computerChoice) {
-        // Winning Cases
-        case "rockscissors":
-        case "rocklizard":
-        case "scissorspaper":
-        case "scissorslizard":
-        case "paperrock":
-        case "paperspock":
-        case "spockscissors":
-        case "spockrock":
-        case "lizardspock":
-        case "lizardpaper":
-            console.log("User wins!"); // Test console log, delete before submission
-            winGame(playerChoice, computerChoice); // Calls the winGame function with populated player & computer choice parameters
-            incrementCurrentWinstreak(); // Calls the function to increase current winstreak by 1
-            checkMaxWinstreak(); // Calls the function to check whether the current winstreak is greater than the previous maximum
-            outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
-            incrementStats(playerChoice);
-            incrementTotalGames("win");
-            calculateWinrate();
-            break;
-        // Losing Cases
-        case "scissorsrock":
-        case "lizardrock":
-        case "paperscissors":
-        case "lizardscissors":  
-        case "rockpaper":
-        case "spockpaper":
-        case "scissorsspock":
-        case "rockspock":
-        case "spocklizard":
-        case "paperlizard":
-            console.log("User loses!"); // Test console log, delete before submission
-            loseGame(playerChoice, computerChoice); // Calls the loseGame function with populated player & computer choice parameters
-            resetCurrentWinstreak(); // Calls the function to reset the winstreak since player lost
-            outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
-            incrementTotalGames("loss");
-            calculateWinrate();
-            break;
-        // Drawing Cases 
-        case "rockrock":
-        case "paperpaper":
-        case "scissorsscissors":
-        case "spockspock":
-        case "lizardlizard":
-            console.log("Draw!"); // Test console log, delete before submission
-            drawGame(playerChoice); // Calls the draw Game function with populated player parameter (only need 1, since both are the same)
-            resetCurrentWinstreak(); // Calls the function to reset the winstreak since player drew
-            outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
-            incrementTotalGames("draw");
-            calculateWinrate();
-            break;
-    }  
+    let winningCases = ["rockscissors","rocklizard","scissorspaper","scissorslizard","paperrock","paperspock","spockscissors","spockrock","lizardspock","lizardpaper"];
+    let losingCases = ["scissorsrock","lizardrock","paperscissors","lizardscissors","rockpaper","spockpaper","scissorsspock","rockspock","spocklizard","paperlizard"];
+    if (winningCases.includes(playerChoice + computerChoice)) {
+        console.log("User wins!"); // Test console log, delete before submission
+        winGame(playerChoice, computerChoice); // Calls the winGame function with populated player & computer choice parameters
+        incrementCurrentWinstreak(); // Calls the function to increase current winstreak by 1
+        checkMaxWinstreak(); // Calls the function to check whether the current winstreak is greater than the previous maximum
+        incrementStats(playerChoice);
+        incrementTotalGames("win");
+    } else if (losingCases.includes(playerChoice + computerChoice)) {
+        console.log("User loses!"); // Test console log, delete before submission
+        loseGame(playerChoice, computerChoice); // Calls the loseGame function with populated player & computer choice parameters
+        resetCurrentWinstreak(); // Calls the function to reset the winstreak since player lost
+        incrementTotalGames("loss");
+    } else {
+        console.log("Draw!"); // Test console log, delete before submission
+        drawGame(playerChoice); // Calls the draw Game function with populated player parameter (only need 1, since both are the same)
+        resetCurrentWinstreak(); // Calls the function to reset the winstreak since player drew
+        incrementTotalGames("draw");
+    }
+    outcomeDisplay(playerChoice, computerChoice); // Calls the function to display the player and computer choice from the game in the display boxes
+    calculateWinrate(); // Calls the function to calculate new winrate based on won games & total games
 }
 
 /** 
