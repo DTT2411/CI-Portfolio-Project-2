@@ -18,7 +18,8 @@ function playGame(playerChoice) {
     console.log("Computer Choice: " + computerChoice);
     let winningCases = ["rockscissors","rocklizard","scissorspaper","scissorslizard","paperrock","paperspock","spockscissors","spockrock","lizardspock","lizardpaper"];
     let losingCases = ["scissorsrock","lizardrock","paperscissors","lizardscissors","rockpaper","spockpaper","scissorsspock","rockspock","spocklizard","paperlizard"];
-    if (winningCases.includes(playerChoice + computerChoice)) {
+    // The following if-else statements compare the combined string of player & computer choices with the above arrays to determine the game outcome
+    if (winningCases.includes(playerChoice + computerChoice)) { 
         console.log("User wins!"); // Test console log, delete before submission
         winGame(playerChoice, computerChoice); // Calls the winGame function with populated player & computer choice parameters
         incrementCurrentWinstreak(); // Calls the function to increase current winstreak by 1
@@ -65,7 +66,7 @@ function winGame(playerChoice, computerChoice) {
  * Updates losing game outcome message and calls the function to increase computer score.
  */
 function loseGame(playerChoice, computerChoice) {
-    console.log(`${computerChoice} beats ${playerChoice} - you lose!`);
+    console.log(`${computerChoice} beats ${playerChoice} - you lose!`); // Test log, delete before submission
     // Creates a new string with capitalised first letter to display as the first word in the outcome message
     let playerChoiceCapitalised = playerChoice[0].toUpperCase() + playerChoice.slice(1,); 
     // console.log(playerChoiceCapitalised); // Test log, delete before submission
@@ -77,7 +78,7 @@ function loseGame(playerChoice, computerChoice) {
  * Updates drawn game outcome.
  */
 function drawGame(playerChoice) {
-    console.log(`You both picked ${playerChoice} - it's a draw!`);
+    console.log(`You both picked ${playerChoice} - it's a draw!`); // Test log, delete before submission
     document.getElementById("game-outcome").textContent = `You both picked ${playerChoice} - it's a draw!`;
 }
 
