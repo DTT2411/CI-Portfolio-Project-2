@@ -87,20 +87,22 @@ header {
 
 /* OUTCOME AREA */
 #game-outcome {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 20px;
 }
 
 .outcome {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     border: 5px solid #4B644A;
     display: inline-block;
+    margin-top: 20px;
+    font-size: 1rem;
 }
 
 #player-choice-icon, 
 #computer-choice-icon {
-    font-size: 8rem;
+    font-size: 4rem;
 }
 
 /* GAME AREA */
@@ -123,6 +125,12 @@ header {
 /* Styles for small (576px) and up */
 @media screen and (min-width: 576px) {
 
+    /* Makes body text larger above mobile screen size */
+    body {
+        font-size: 1.5rem;
+    }
+
+    /* Slightly widens the score display box on larger screens */
     #score-area {
         width: 300px;
         font-size: 1.5rem;
@@ -140,6 +148,24 @@ header {
         position: absolute;
         top: 22px;
         right: 7px;
-}
+    }
+
+    #game-outcome {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    
+    .outcome {
+        width: 250px;
+        height: 250px;
+        border: 5px solid #4B644A;
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    #player-choice-icon, 
+    #computer-choice-icon {
+        font-size: 8rem;
+    }
 
 }
