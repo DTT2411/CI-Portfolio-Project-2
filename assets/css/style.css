@@ -94,7 +94,7 @@ header {
 .outcome {
     width: 150px;
     height: 150px;
-    border: 5px solid #4B644A;
+    border: 5px solid var(--tertiary-color); /* set to var rather than colour directly? */
     display: inline-block;
     margin-top: 20px;
     font-size: 1rem;
@@ -118,7 +118,7 @@ header {
 }
 
 .choice:hover {
-    background-color:#4B644A;
+    background-color:var(--tertiary-color);
 }
 
 /* MEDIA QUERIES */
@@ -139,14 +139,12 @@ header {
 
     /* positions the player score label within the respective div */
     #player-label {
-        position: absolute;
         top: 22px;
         left: 30px;
     }
 
     /* positions the computer score label within the respective div */
     #computer-label {
-        position: absolute;
         top: 22px;
         right: 7px;
     }
