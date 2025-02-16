@@ -66,9 +66,7 @@ Custom CSS styling is used to keep size of the elements, fonts etc. in the outco
 ![Game Outcome Area Screenshot Laptop](assets/images/game-outcome-area-laptop.jpg) <br>
 
 #### 4. Game area [UPDATE REQUIRED]
-Information about the instruction products on offer from the ski school are featured prominently on the main page. Bootstrap cards have been used to structure these sections, with custom styling applied to ensure they fit with the colour scheme and layout of the site. The cards are displayed responsively, taking up the full width of the screen on mobile, and splitting into two or four columns for medium (768px+) and large (1200+) screens. All cards contain a header image which is relevant to the type of instruction, as well as key information such as pricing, skill level requirement, group size and appropriate age.
-
-Screenshots below are of the Lessons section - the same structure and styling is applied to the Clinics section.
+Game are info here
 
 **Up to 768px** <br>
 ![Lessons Area Screenshot - small screens](assets/screenshots/screenshot-lessons-small.png)
@@ -81,23 +79,22 @@ Screenshots below are of the Lessons section - the same structure and styling is
 
 
 #### 6. Stats Area [UPDATE REQUIRED]
-The contact information for the ski school appears in a separate footer section, and this is applied consistently across all pages. The footer contains key contact information including the school's address, email address, phone number, and social media links. A table containing the school's opening times has also been included in this section. Icons have been included beside contact fields for visual guidance, as well clickable icons for the social media accounts. The footer is responsive, with the contact details and opening times stacking vertically on small screens, and horizontally on larger screens for the best utilisation of screen space.
-
+Stats area info here
 **Up to 992px** <br>
-![Contact Area Screenshot - small screens](assets/screenshots/screenshot-contact-small.png)
+![Stats Area Screenshot - small screens](assets/screenshots/screenshot-contact-small.png)
 
 **Over 992px** <br>
-![Contact Area Screenshot - large screens](assets/screenshots/screenshot-contact-large.png)
+![Stats Area Screenshot - large screens](assets/screenshots/screenshot-contact-large.png)
 
 
-### Features to implement [UPDATE REQUIRED]
-1. **"Our staff" page:** One of the "could-have" features identified during project planning was to include a dedicated page to introducing staff at the ski school. Bootstrap cards and grid could be used to create cards for each staff member and instructor, although I would need to consider how to differentiate these from the cards in the Lessons and Clinics areas. The cards would contain details about the staff member including name, short background description, and (importantly) any qualifications the individual has, in particular any which would allow them to instruct physically impaired clients. 
+### Features to implement
+1. **Development of "Stats" section:** The stats table is functional but could be expanded/improved in several ways:
+- Calculate and display in table (adding columns where needed) additional stats e.g. individual win-rates for each specific gesture; loss/draw streaks
+- Create graphs or charts comparing winrate of user's choices
+- Could also display stats for the computer's choices
+- Develop a function to track and display your "best" gesture, taking winrate into consideration. Could require minimum 10 games played to drive up user engagement.
 
-2. **Social events page:** Another "could-have" feature identified during conception was for a page of social events/sessions run by the ski school, to address needs of users who may be coming to the organisation not only for instruction but for the opportunity to connect with others with similar interests. 
-
-3. **Testimonials carousel:** While the current Testimonials page is functionally sound, after implementation and review I am not completely happy with the appearance - I feel it looks blocky and uninteresting as it stands. One option to liven this element up would be to have a single carousel for testimonials, with controls to move between different testimonials. If I were to implement this, I would probably change the site structure by removing the separate Testimonials page and instead have this as another section on the main page, most likely underneath the Clinics section. 
-
-4. **Key information page:** While this was not established as a potential feature during design, after implementing and reviewing the site, and from comments made by those I have asked to review the site, a dedicated area or page for key information pertaining to the school would be helpful. This would include information that is too wordy/specific to include in the contact/footer area, such as: FAQ on what equipment people should bring vs what they can hire; meeting points for ski school and other classes; emergency contact details; helpful information e.g. where to get lift passes, best restaurants in resort.
+2. **"Reset" button:** This would be a minor quality of life improvement to allow the user to reset all stats and counters on the page, and clear the outcome display boxes and messages, without having to refresh the page. This would be relatively easy to implement with a single function in script.js to target elements in the DOM to set back to 0. 
 
 
 ## Testing [UPDATE REQUIRED]
@@ -106,21 +103,20 @@ Testing was conducted throughout the development cycle of the project, using the
 Both manual testing and validator testing were used to identify potential bugs and inefficiencies in the project code.
  
 ### Manual Testing [UPDATE REQUIRED]
-I confirmed through manual testing that the website is responsive on all screen sizes and operates correctly on different browsers such as Chrome, Edge and Safari.
-The navigation bar works correctly, taking the user to the appropriate section or page wherever they are on the site, and ensuring that the current page is highlighted on the bar.
-The booking and hiring forms work correctly, requiring the user to input appropriate data for different fields (i.e. email must contain `@`, phone must contain number, etc.) and upon submitting, the user is brought to the form success page as intended.
+I confirmed through manual testing that the page is responsive on all screen sizes and operates correctly on different browsers such as Chrome, Edge and Safari.
 
 Bugs resolved during manual testing:
-- Testimonials page did not appear active on navigation bar when on the page. Simple fix by changing the element with the `active` class.
-- I noticed that on smaller screens, the label for textareas in the hiring and booking form was extending beyond the edge of the text box. This was particularly pronounced on phone size screens. I used DevTools to inspect the label element and was able to identify a `white-space: nowrap` attribute, inherited from a bootstrap class which had been applied to the label, which was causing the issue. I looked this attribute up since I wasn't familiar with it and was able to find an alternative, `white-space: normal`, which fixed the issue. The textarea labels now word wrap appropriately onto multiple smaller screens. 
+- 
+- 
 
 ### Automated Testing [UPDATE REQUIRED]
+Lighthouse testing was conducted on the deployed page with the following results.
+
+
 During lighthouse testing of the booking form page, an accessibility issue was identified - specifically, the contrast between the labels and background was not high enough for normal text. This was resolved by lightening the secondary colour, creating greater contrast. Upon retesting with lighthouse in the same section, the issue was seen to be resolved. 
 
 **Lighthouse testing results** 
-
-Homepage <br>
-![Homepage lighthouse test screenshot](assets/screenshots/screenshot-homepage-lighthouse-test.png)
+![Lighthouse Test Screenshot](assets/screenshots/screenshot-homepage-lighthouse-test.png)
 
 ### Validator Testing [UPDATE REQUIRED]
 
