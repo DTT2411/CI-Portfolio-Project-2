@@ -39,8 +39,9 @@ ul {
 
 button {
     background-color: var(--primary-color);
-    font-size: 5rem; 
     color: var(--secondary-color);
+    width: 60px;
+    height: 100px;
 }
 
 h1 {
@@ -61,7 +62,7 @@ header {
     border: 5px double var(--primary-color);
     width: 250px;
     margin: auto;
-    font-size: 1rem;
+    font-size: 10px;
     padding: 15px;
     position: relative;
 }
@@ -115,8 +116,8 @@ header {
 
 .choice {
     margin: 10px 5px;
-    padding: 15px;
-    font-size: 3.5rem;
+    /* padding: 15px; */
+    font-size: 2.5rem;
 }
 
 .choice:hover {
@@ -143,6 +144,11 @@ td {
     /* Makes body text larger above mobile screen size */
     body {
         font-size: 1rem;
+    }
+
+    button {
+        width: 100px;
+        height: 150px;
     }
 
     /* Slightly widens the score display box on larger screens */
@@ -184,6 +190,8 @@ td {
     }
 
     .choice {
+        margin: 10px 5px;
+        /* padding: 15px; */
         font-size: 5rem;
     }
 
