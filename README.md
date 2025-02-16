@@ -1,64 +1,69 @@
 # Rock Paper Scissors Lizard Spock
 
 ## Project Description [UPDATE REQUIRED]
-Rock Paper Scissors Lizard Spock is an extension of the classic game, "Rock Paper Scissors" - the addition of two new symbols, Lizard and Spock, and their respective rules, make winning outcomes more likely! This application will allow the user to play against the computer which will pick one of the five symbols randomly to play against you. Reckon you can beat it?
+Rock Paper Scissors Lizard Spock is an extension of the classic game, "Rock Paper Scissors" - the addition of two new symbols, Lizard and Spock, and their respective rules, make winning outcomes more likely! 
 
-![Website Mockup Screenshot](assets/screenshots/screenshot-mockup.png) 
+
+
+
+This application will allow the user to play against the computer which will pick one of the five symbols randomly to play against you. Reckon you can beat it?
+
+![Website Mockup Screenshot](assets/images/mockup.jpg) 
 
 ## Project Principles [UPDATE REQUIRED]
 1. **Mobile-first development:** The website has been designed with responsiveness in mind. All elements and structures were first created to fit mobile screens, with additional styling and classes to ensure responsiveness on larger screens. This is particularly important with a small and simple application such as this, as it is well suited for mobile interaction. 
-2. **Accessibility:** Code used within the project is compliant with best practice for accessibility. The application is also intentionally designed not to utilise images which will ensure rapid loading.
+2. **Accessibility:** Code used within the project is compliant with best practice for accessibility. The application is also intentionally designed to utilise icons over images which will ensure rapid loading.
 
 
-## Wireframes [UPDATE REQUIRED]
+## Wireframes
 Balsamiq Wireframes software was used during the planning process to establish a general structure the game page. 
 
 Significant changes between the structure indicated in the wireframes versus the end product include:
-- Navigation bar items were changed to align to the right side of the bar rather than the left.
-- Additional items were added to the navigation bar to help users navigate to lessons and clinics sections, and a link to the Testimonials page was also added after this had been developed.
-- A single hero image spanning the full width of the header was implemented, rather than a carousel of different images.
-- Additional lead text was included above the lessons and clinics sections on the homepage to provide context about each, and how they differ, helping the user decide which is better for them. 
-- The details in the footer were compressed (e.g. social media links changed from list to icons and put within the contact details list, same with address) to make the footer less cramped, particularly on smaller screens.
-- Split the date fields in the forms into arrival and departure dates since this would be more informative for both booking and hiring applications.
-- Final product uses drop-down select menus rather than checkboxes, where possible, in booking and hiring forms to better utilise space.
-- Differently styled border established around booking and hiring forms to distinguish these areas from the rest of the site.
+- The wireframes are B&W - colour scheme was decided on and implemented at a later stage.
+- The final version includes a table of stats below the game area screen which had not been designed at the wireframing stage. 
 
-**Homepage** <br>
-![Balsamiq Homepage Screenshot](assets/screenshots/screenshot-balsamiq-homepage.png)
+**Mobile** <br>
+![Balsamiq Mobile Screenshot](assets/images/wireframe-mobile.jpg)
 
-**Booking page** <br>
-![Balsamiq Booking Screenshot](assets/screenshots/screenshot-balsamiq-booking.png)
+**Tablet** <br>
+![Balsamiq Tablet Screenshot](assets/images/wireframe-tablet.jpg)
 
-**Hiring page** <br>
-![Balsamiq Hiring Screenshot](assets/screenshots/screenshot-balsamiq-hiring.png)
+**Laptop+** <br>
+![Balsamiq Laptop Screenshot](assets/images/wireframe-laptop.jpg)
 
-**Form success page** <br>
-![Balsamiq Success Screenshot](assets/screenshots/screenshot-balsamiq-success.png)
-
-**Testimonials page** <br>
-![Balsamiq Testimonials Screenshot](assets/screenshots/screenshot-balsamiq-testimonials.png)
 
 ## Features
 
 ### Existing Features
-#### 1. Header [UPDATE REQUIRED]
+#### 1. Header
 Simple header section containing the title of the project and laying out the primary font and colour scheme for the rest of the page.
 
-#### 2. Information section - game description and rules [UPDATE REQUIRED]
-Drop-down sections contain information about the game and the associated rules, including new rules for new gestures (Lizard & Spock). 
+**Smaller screens (mobile, small tablet, up to 576px)** <br>
+![Header Screenshot Mobile](assets/images/header-mobile.jpg) <br>
 
-Directly below the navigation bar at the home page, a header and hero image area has been created. This area is covered by a responsive, high-quality hero image that stretches to fit the screen size. This image was used as a source for selecting a colour scheme for the website as a whole. The area also contains a title, subtitle and lead text intoducing the school at a glance, and this is superimposed over a semi-transparent colour block to make it readable against the image in the background. The font size of the lead text decreases below 768px screen size in order to prevent overflow.
+**Larger screens (tablet, laptop, 768px+)** <br>
+![Header Screenshot Laptop](assets/images/header-laptop.jpg) <br>
 
-![Hero Area Screenshot](assets/screenshots/screenshot-hero-area.png)
+#### 2. Information Area - game description and rules [UPDATE REQUIRED]
+The information area contains two sections, one for a description of the game and another displaying the rules (i.e. conditions for winning, losing and drawing).
+Both sections are displayed by default but can be collapsed by clicking their respective header, and this is indicated by the arrow icon next to each. 
+
+**Smaller screens (mobile, small tablet, up to 576px)** <br>
+![Information Area Screenshot Mobile Default](assets/images/information-area-mobile-default.jpg) <br>
+
+**Larger screens (tablet, laptop, 768px+)** <br>
+![Information Area Screenshot Laptop Default](assets/images/information-area-laptop-default.jpg) <br>
 
 #### 3. Game outcome area [UPDATE REQUIRED]
-The first element within the main area of the home page is the "Reasons" section, which provide users with several benefits of booking with this ski school. The reasons are kept punchy and concise, one short sentence each, with icons for visual guidance. The reasons section is responsive - on screens below 1200px the items appear stacked vertically, while on larger screens they split into two columns to better utilise space. 
+The game outcome area is featured centrally within the screen since this is the most visually active section for the user to keep track of. The outcome area includes several elements including the score counter, the visual display of the game's outcome, and a message outputting the choices and outcome of the game verbally.
 
-**Up to 1200px** <br>
-![Reasons Area Screenshot - small screens](assets/screenshots/screenshot-reasons-small.png)
+Custom CSS styling is used to keep size of the elements, fonts etc. in the outcome area small for mobile screens and larger for laptop screens and up, but the layout of the area remains consistent. 
 
-**Over 1200px** <br>
-![Reasons Area Screenshot - large screens ](assets/screenshots/screenshot-reasons-large.png)
+**Smaller screens (mobile, small tablet, up to 576px)** <br>
+![Game Outcome Area Screenshot Mobile](assets/images/game-outcome-area-mobile.jpg) <br>
+
+**Larger screens (tablet, laptop, 768px+)** <br>
+![Game Outcome Area Screenshot Laptop](assets/images/game-outcome-area-laptop.jpg) <br>
 
 #### 4. Game area [UPDATE REQUIRED]
 Information about the instruction products on offer from the ski school are featured prominently on the main page. Bootstrap cards have been used to structure these sections, with custom styling applied to ensure they fit with the colour scheme and layout of the site. The cards are displayed responsively, taking up the full width of the screen on mobile, and splitting into two or four columns for medium (768px+) and large (1200+) screens. All cards contain a header image which is relevant to the type of instruction, as well as key information such as pricing, skill level requirement, group size and appropriate age.
