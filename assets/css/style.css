@@ -87,7 +87,6 @@ header {
 /* OUTCOME AREA */
 #game-outcome {
     font-size: 1rem;
-    margin-top: 20px;
 }
 
 .outcome {
@@ -95,11 +94,14 @@ header {
     height: 120px;
     border: 5px solid var(--tertiary-color); 
     display: inline-block;
-    margin-top: 20px;
 }
 
 .outcome h2 {
     font-size: 0.8rem;
+}
+
+#outcome-display {
+    padding-bottom: 5px;
 }
 
 #player-choice-icon, 
@@ -109,8 +111,9 @@ header {
 
 /* GAME AREA */
 #call-to-action {
-    margin-top: 20px;
-    font-size: 1rem;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .choice {
@@ -124,7 +127,7 @@ header {
 
 /* STATS AREA */
 table {
-    width: 200px;
+    width: 250px;
     margin: auto;
     text-align: left;
 }
@@ -169,7 +172,6 @@ td {
 
     #game-outcome {
         font-size: 1.5rem;
-        margin-top: 20px;
     }
     
     .outcome {
@@ -182,8 +184,13 @@ td {
         font-size: 1.2rem;
     }    
 
+    #outcome-display {
+        padding-bottom: 20px;
+    }
+
     #call-to-action {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        margin-top: 5px;
     }
 
     #player-choice-icon, 
