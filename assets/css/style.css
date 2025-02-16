@@ -30,6 +30,7 @@ body {
     background-color: var(--secondary-color);
 }
 
+/* This class is applied to arrows next to drop-down menu on click so they invert */
 .rotate {
     transform: rotateX(-180deg);
 }
@@ -40,7 +41,7 @@ ul {
     padding: 0;
 }
 
-
+/* Sets sizing for choice buttons */
 button {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -111,6 +112,7 @@ header {
     padding-bottom: 5px;
 }
 
+
 #player-choice-icon, 
 #computer-choice-icon {
     font-size: 3rem;
@@ -150,6 +152,8 @@ td {
 /* Styles for small (576px) and up */
 @media screen and (min-width: 576px) {
 
+    /* GLOBAL STYLES */
+
     /* Makes body text larger above mobile screen size */
     body {
         font-size: 1rem;
@@ -159,6 +163,8 @@ td {
         width: 100px;
         height: 150px;
     }
+
+    /* SCORE AREA */
 
     /* Slightly widens the score display box on larger screens */
     #score-area {
@@ -178,6 +184,8 @@ td {
         right: 7px;
     }
 
+    /* OUTCOME AREA */
+
     #game-outcome {
         font-size: 1.5rem;
     }
@@ -196,6 +204,8 @@ td {
         padding-bottom: 20px;
     }
 
+    /* GAME AREA */
+
     #call-to-action {
         font-size: 1rem;
         margin-top: 5px;
@@ -210,6 +220,8 @@ td {
         margin: 10px 5px;
         font-size: 5rem;
     }
+
+    /* STATS AREA */
 
     table {
         width: 400px;

@@ -150,10 +150,8 @@ The direct link to the deployed page can be found here - https://dtt2411.github.
 
 ## Credits [UPDATE REQUIRED]
 
-### Code
-- Reference to Love Running and Boardwalk Games modules from CI full stack course were used for guidance on general structure and layout.
-    - Love Running: https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LRFX101+5/courseware/e805068059af42af87681032aa64053f/1da6ad13213740f1855a51d30a2375b1/
-    - Boardwalk Games: https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+BG+1/courseware/21d4dc3fa8f0407a8359ceb1d6fc0c51/c113d413c91d4d789399ce5b1303f2fa/
+### Concept
+I used Project Example Idea 1 recommended within Code Institute's Portfolio Project 2 Assessment Guide: https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+JSE_PAGPPF+2021_Q2/courseware/30137de05cd847d1a6b6d2c7338c4655/c3bd296fe9d643af86e76e830e1470dd/
 
 ### Content
 - Bootstrap structures (e.g. table, collapsible) and classes (e.g. text-center, text-md-start) were used to improve efficiency of html and css respectively. One bootstrap JS script was also used to provide functionality for the collapsible text content in the game information area. https://getbootstrap.com/docs/5.3/getting-started/introduction/.
