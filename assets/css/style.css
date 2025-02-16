@@ -120,6 +120,17 @@ header {
     background-color:var(--tertiary-color);
 }
 
+/* STATS AREA */
+table {
+    width: 200px;
+    margin: auto;
+    text-align: left;
+}
+
+td {
+    width: 60px;
+}
+
 /* MEDIA QUERIES */
 
 /* Styles for small (576px) and up */
@@ -154,18 +165,22 @@ header {
     }
     
     .outcome {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         margin-left: none;
     }
 
     #player-choice-icon, 
     #computer-choice-icon {
-        font-size: 8rem;
+        font-size: 6rem;
     }
 
     .choice {
         font-size: 5rem;
+    }
+
+    table {
+        width: 400px;
     }
 
 }
