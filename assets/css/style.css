@@ -30,6 +30,10 @@ body {
     background-color: var(--secondary-color);
 }
 
+.rotate {
+    transform: rotateX(-180deg);
+}
+
 /* Removes default bullet points and padding from list items */
 ul {
     list-style-type: none;

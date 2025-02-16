@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 })
 
-// 
+// Adds event listener to Description and Rules section to expand/contract on click
 let collapsibles = document.getElementsByClassName("collapsible");
 for (let collapsible of collapsibles) {
   collapsible.addEventListener("click", function() {
@@ -22,6 +22,19 @@ for (let collapsible of collapsibles) {
     }
   });
 }
+
+// Adds event listeners and classes to make the arrow next to the Description and Rules subtitles rotate when expanded vs contracted
+let descriptionCollapse = document.getElementById("description-collapse");
+let descriptionCollapseIcon = document.getElementById("description-collapse-icon");
+descriptionCollapse.addEventListener("click", function() {
+    descriptionCollapseIcon.classList.toggle("rotate");
+});
+
+let rulesCollapse = document.getElementById("rules-collapse");
+let rulesCollapseIcon = document.getElementById("rules-collapse-icon");
+rulesCollapse.addEventListener("click", function() {
+    rulesCollapseIcon.classList.toggle("rotate");
+  });
 
 
 /** 
