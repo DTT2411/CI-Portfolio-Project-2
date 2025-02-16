@@ -67,6 +67,8 @@ Custom CSS styling is used to keep size of the elements, fonts etc. in the outco
 #### 4. Game area
 The game area includes two elements. The first is the call to action, telling the user how to start a game. The second is a row of buttons corresponding to the different gestures that can be played by the user - this is indicated graphically with icons. Upon clicking one of the buttons, the game instance will run and the outcome will immediately be displayed in the Game Outcome Area described above.
 
+The design of the game area is responsive, with smaller buttons to fit across mobile screens expanding on larger screens to utilise space effectively. 
+
 **Smaller screens (mobile, small tablet, up to 576px)** <br>
 ![Game Area Screenshot Mobile](assets/images/game-area-mobile.jpg) <br>
 
@@ -75,12 +77,13 @@ The game area includes two elements. The first is the call to action, telling th
 
 
 #### 6. Stats Area [UPDATE REQUIRED]
-Stats area info here
-**Up to 992px** <br>
-![Stats Area Screenshot - small screens](assets/screenshots/screenshot-contact-small.png)
+The stats area includes the section title followed by a table of various statistics based on the user's past interactions with the game. 
 
-**Over 992px** <br>
-![Stats Area Screenshot - large screens](assets/screenshots/screenshot-contact-large.png)
+**Smaller screens (mobile, small tablet, up to 576px)** <br>
+![Stats Area Screenshot Mobile](assets/images/stats-area-mobile.jpg) <br>
+
+**Larger screens (tablet, laptop, 768px+)** <br>
+![Stats Area Screenshot Laptop](assets/images/stats-area-laptop.jpg) <br>
 
 
 ### Features to implement
@@ -92,6 +95,7 @@ Stats area info here
 
 2. **"Reset" button:** This would be a minor quality of life improvement to allow the user to reset all stats and counters on the page, and clear the outcome display boxes and messages, without having to refresh the page. This would be relatively easy to implement with a single function in script.js to target elements in the DOM to set back to 0. 
 
+3. **Cloud data hosting:** Rather than reading values to/from the DOM, one option would be to use HTML Web Storage API to record values. While this would require a significant overhaul of the Javascript for the application, it would allow users' statistics to be saved and retained, rather than resetting every time the page is refreshed. This would also provide additional value to the reset button mentioned above which is currently redundant with the availability of refreshing. This would also be a more secure way to hold game data - currently it is very easy to "cheat" the game, which can be done by simply amending DOM values via devTools. 
 
 ## Testing
 Testing was conducted throughout the development cycle of the project, using the deployed version of the website as this was deployed at a very early stage. DevTools was utilised extensively to facilitate the testing of the site's responsiveness on different screen sizes (phone, tablet, laptop, desktop) in accordance with industry standard breakpoints (https://getbootstrap.com/docs/5.3/layout/breakpoints/#available-breakpoints).
