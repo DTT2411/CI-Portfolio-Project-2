@@ -127,6 +127,7 @@ table {
     text-align: left;
 }
 
+/* Sets constant width for the columns in the stats table */
 td {
     width: 60px;
 }
