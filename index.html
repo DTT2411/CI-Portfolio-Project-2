@@ -19,30 +19,30 @@
 </head>
 
 <body>
+
   <header class="header text-center">
-    <h1>Rock Paper Scissors Spock Lizard</h1>
+    <h1>Rock Paper Scissors Lizard Spock</h1>
   </header>
+
   <section id="game-info" class="container text-md-start text-center">
     <h2 type="button" class="collapsible">Description <i class="fa-solid fa-angle-down"></i></h2>
     <div class="content">
-      <p>"Rock Paper Scissors Spock Lizard" is an extension of the classic Rock Paper Scissors game. 
-        There are two additional gestures - Spock and Lizard - with their own interactions with the original three gestures.
+      <p>"Rock Paper Scissors Lizard Spock " is an extension of the classic Rock Paper Scissors game. 
+        There are two additional gestures - Lizard and Spock - with their own interactions with the original three gestures.
         Read the rules below to find out the weaknesses and strengths of each gesture, then click one of the buttons below to start a match against the computer.
       </p>
     </div>
     <h2 type="button" class="collapsible">Rules <i class="fa-solid fa-angle-down"></i></h2>
     <div class="content">
       <ul>
-        <li>Rock beats Scissors and Lizard</li>
-        <li>Paper beats Rock and Spock</li>
-        <li>Scissors beats Paper and Lizard</li>
-        <li>Spock beats Scissors and Rock</li>
-        <li>Lizard beats Spock and Paper</li>
+        <li>Rock (<i class="fa-regular fa-hand-back-fist"></i>) beats Scissors (<i class="fa-regular fa-hand-scissors"></i>) and Lizard (<i class="fa-regular fa-hand-lizard"></i>)</li>
+        <li>Paper (<i class="fa-regular fa-hand"></i>) beats Rock (<i class="fa-regular fa-hand-back-fist"></i>) and Spock (<i class="fa-regular fa-hand-spock"></i>)</li>
+        <li>Scissors (<i class="fa-regular fa-hand-scissors"></i>) beats Paper (<i class="fa-regular fa-hand"></i>) and Lizard (<i class="fa-regular fa-hand-lizard"></i>)</li>
+        <li>Lizard (<i class="fa-regular fa-hand-lizard"></i>) beats Spock (<i class="fa-regular fa-hand-spock"></i>) and Paper (<i class="fa-regular fa-hand"></i>)</li>
+        <li>Spock (<i class="fa-regular fa-hand-spock"></i>) beats Scissors (<i class="fa-regular fa-hand-scissors"></i>) and Rock (<i class="fa-regular fa-hand-back-fist"></i>)</li>
         <li>Choosing the same gesture results in a draw</li>
       </ul>
     </div>
-
-    
   </section>
 
   <section id="game-area" class="text-md-start text-center">
@@ -69,8 +69,8 @@
       <button id="rock" class="choice text-center"><i class="fa-regular fa-hand-back-fist"></i></button>
       <button id="paper" class="choice"><i class="fa-regular fa-hand"></i></button>
       <button id="scissors" class="choice"><i class="fa-regular fa-hand-scissors"></i></button>
-      <button id="spock" class="choice"><i class="fa-regular fa-hand-spock"></i></button>
       <button id="lizard" class="choice"><i class="fa-regular fa-hand-lizard"></i></button>
+      <button id="spock" class="choice"><i class="fa-regular fa-hand-spock"></i></button>
     </div>
   </section>
 
@@ -119,17 +119,16 @@
           <td id="scissors-wins">0</td>
         </tr>
         <tr>
-          <th scope="row">Wins with spock: </th>
-          <td id="spock-wins">0</td>
-        </tr>
-        <tr>
           <th scope="row">Wins with lizard: </th>
           <td id="lizard-wins">0</td>
+        </tr>
+        <tr>
+          <th scope="row">Wins with spock: </th>
+          <td id="spock-wins">0</td>
         </tr>
       </tbody>
     </table>
   </section>
-  </div>
 
     <!-- <div id="total-games-label" class="label">Total number of games: <span id="total-games">0</span></div>
     <div id="total-wins-label" class="label">Total number of wins: <span id="total-wins">0</span></div>
