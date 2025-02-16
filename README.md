@@ -64,17 +64,14 @@ Custom CSS styling is used to keep size of the elements, fonts etc. in the outco
 **Larger screens (tablet, laptop, 768px+)** <br>
 ![Game Outcome Area Screenshot Laptop](assets/images/game-outcome-area-laptop.jpg) <br>
 
-#### 4. Game area [UPDATE REQUIRED]
-Game are info here
+#### 4. Game area
+The game area includes two elements. The first is the call to action, telling the user how to start a game. The second is a row of buttons corresponding to the different gestures that can be played by the user - this is indicated graphically with icons. Upon clicking one of the buttons, the game instance will run and the outcome will immediately be displayed in the Game Outcome Area described above.
 
-**Up to 768px** <br>
-![Lessons Area Screenshot - small screens](assets/screenshots/screenshot-lessons-small.png)
+**Smaller screens (mobile, small tablet, up to 576px)** <br>
+![Game Area Screenshot Mobile](assets/images/game-area-mobile.jpg) <br>
 
-**768px to 1200px** <br>
-![Lessons Area Screenshot - medium screens](assets/screenshots/screenshot-lessons-medium.png)
-
-**Over 1200px** <br>
-![Lessons Area Screenshot - large screens](assets/screenshots/screenshot-lessons-large.png)
+**Larger screens (tablet, laptop, 768px+)** <br>
+![Game Area Screenshot Laptop](assets/images/game-area-laptop.jpg) <br>
 
 
 #### 6. Stats Area [UPDATE REQUIRED]
