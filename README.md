@@ -44,7 +44,7 @@ Simple header section containing the title of the project and laying out the pri
 **Larger screens (tablet, laptop, 768px+)** <br>
 ![Header Screenshot Laptop](assets/images/header-laptop.jpg) <br>
 
-#### 2. Information Area - game description and rules [UPDATE REQUIRED]
+#### 2. Information Area - game description and rules
 The information area contains two sections, one for a description of the game and another displaying the rules (i.e. conditions for winning, losing and drawing).
 Both sections are displayed by default but can be collapsed by clicking their respective header, and this is indicated by the arrow icon next to each. 
 
@@ -54,7 +54,7 @@ Both sections are displayed by default but can be collapsed by clicking their re
 **Larger screens (tablet, laptop, 768px+)** <br>
 ![Information Area Screenshot Laptop Default](assets/images/information-area-laptop-default.jpg) <br>
 
-#### 3. Game outcome area [UPDATE REQUIRED]
+#### 3. Game Outcome Area
 The game outcome area is featured centrally within the screen since this is the most visually active section for the user to keep track of. The outcome area includes several elements including the score counter, the visual display of the game's outcome, and a message outputting the choices and outcome of the game verbally.
 
 Custom CSS styling is used to keep size of the elements, fonts etc. in the outcome area small for mobile screens and larger for laptop screens and up, but the layout of the area remains consistent. 
@@ -97,17 +97,21 @@ Stats area info here
 2. **"Reset" button:** This would be a minor quality of life improvement to allow the user to reset all stats and counters on the page, and clear the outcome display boxes and messages, without having to refresh the page. This would be relatively easy to implement with a single function in script.js to target elements in the DOM to set back to 0. 
 
 
-## Testing [UPDATE REQUIRED]
+## Testing
 Testing was conducted throughout the development cycle of the project, using the deployed version of the website as this was deployed at a very early stage. DevTools was utilised extensively to facilitate the testing of the site's responsiveness on different screen sizes (phone, tablet, laptop, desktop) in accordance with industry standard breakpoints (https://getbootstrap.com/docs/5.3/layout/breakpoints/#available-breakpoints).
 
 Both manual testing and validator testing were used to identify potential bugs and inefficiencies in the project code.
  
-### Manual Testing [UPDATE REQUIRED]
+### Manual Testing
 I confirmed through manual testing that the page is responsive on all screen sizes and operates correctly on different browsers such as Chrome, Edge and Safari.
 
 Bugs resolved during manual testing:
-- 
-- 
+- Noticed that the outcome message did not appear capitalised as the `playerChoice` parameter will always be lower case. This was resolved by applying a string method to pull out the first letter in the string, capitalising it, concatenating with the remaining string and and assigning this to a new variable.<br>
+`let playerChoiceCapitalised = playerChoice[0].toUpperCase() + playerChoice.slice(1,);`
+- Despite using the `.toFixed(2)` math method on the winrate, I was sometimes seeing recurring numbers after the decimal point. This was resolved by splitting the code over two lines and applying the math method separately and assigning to a new variable. <br>
+`let roundedTotalWinrate = Math.round(totalWinrate*100);`
+- Identified several minor text/label alignment issues in the outcome area which were resolved with amendments to custom CSS.
+
 
 ### Automated Testing [UPDATE REQUIRED]
 Lighthouse testing was conducted on the deployed page with the following results.
