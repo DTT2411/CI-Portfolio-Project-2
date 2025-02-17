@@ -109,16 +109,22 @@ Bugs resolved during manual testing:
 
 ### Automated Testing
 Lighthouse testing was conducted on the deployed page with the following results.
+Intial lighthouse test reported an accessibility issue - I did not add `name` attributes to the choice buttons, which makes them difficult to use for users with screen readers. <br>
+![Lighthouse Error Screenshot](assets/images/lighthouse-error.jpg)
 
-During lighthouse testing of the booking form page, an accessibility issue was identified - specifically, the contrast between the labels and background was not high enough for normal text. This was resolved by lightening the secondary colour, creating greater contrast. Upon retesting with lighthouse in the same section, the issue was seen to be resolved. 
+This was resolved by adding names identical to the IDs (e.g. `rock`, `paper`) to the button elements. After retesting with lighthouse, no further errors were found. 
 
 **Lighthouse testing results** 
-![Lighthouse Test Screenshot](assets/screenshots/screenshot-homepage-lighthouse-test.png)
+
+
+![Lighthouse Test Screenshot](assets/images/lighthouse-test.jpg)
 
 ### Validator Testing [UPDATE REQUIRED]
+The CI-recommended W3C validators were utilised for automated testing of each file within the project.
 
 #### HTML
-Homepage: No errors.
+No warnings or errors reported. <br>
+![HTML Error Screenshot](assets/images/html-validator-error.jpg) <br>
 
 #### CSS
 1 error was reported upon intial testing: <br>
