@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             let playerChoice = this.getAttribute("id");
             playGame(playerChoice);
-        })
+        });
     }
-})
+});
 
 // Adds event listener to Description and Rules section to expand/contract on click
 let collapsibles = document.getElementsByClassName("collapsible");

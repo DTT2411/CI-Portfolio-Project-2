@@ -36,7 +36,7 @@ Simple header section containing the title of the project and laying out the pri
 **Smaller screens (mobile, small tablet, up to 576px)** <br>
 ![Header Screenshot Mobile](assets/images/header-mobile.jpg) <br>
 
-**Larger screens (tablet, laptop, 768px+)** <br>
+**Larger screens (tablet, laptop, 576px+)** <br>
 ![Header Screenshot Laptop](assets/images/header-laptop.jpg) <br>
 
 #### 2. Information Area - game description and rules
@@ -46,7 +46,7 @@ Both sections are displayed by default but can be collapsed by clicking their re
 **Smaller screens (mobile, small tablet, up to 576px)** <br>
 ![Information Area Screenshot Mobile Default](assets/images/information-area-mobile-default.jpg) <br>
 
-**Larger screens (tablet, laptop, 768px+)** <br>
+**Larger screens (tablet, laptop, 576px+)** <br>
 ![Information Area Screenshot Laptop Default](assets/images/information-area-laptop-default.jpg) <br>
 
 #### 3. Game Outcome Area
@@ -57,7 +57,7 @@ Custom CSS styling is used to keep size of the elements, fonts etc. in the outco
 **Smaller screens (mobile, small tablet, up to 576px)** <br>
 ![Game Outcome Area Screenshot Mobile](assets/images/game-outcome-area-mobile.jpg) <br>
 
-**Larger screens (tablet, laptop, 768px+)** <br>
+**Larger screens (tablet, laptop, 576px+)** <br>
 ![Game Outcome Area Screenshot Laptop](assets/images/game-outcome-area-laptop.jpg) <br>
 
 #### 4. Game area
@@ -68,7 +68,7 @@ The design of the game area is responsive, with smaller buttons to fit across mo
 **Smaller screens (mobile, small tablet, up to 576px)** <br>
 ![Game Area Screenshot Mobile](assets/images/game-area-mobile.jpg) <br>
 
-**Larger screens (tablet, laptop, 768px+)** <br>
+**Larger screens (tablet, laptop, 576px+)** <br>
 ![Game Area Screenshot Laptop](assets/images/game-area-laptop.jpg) <br>
 
 #### 6. Stats Area
@@ -77,7 +77,7 @@ The stats area includes the section title followed by a table of various statist
 **Smaller screens (mobile, small tablet, up to 576px)** <br>
 ![Stats Area Screenshot Mobile](assets/images/stats-area-mobile.jpg) <br>
 
-**Larger screens (tablet, laptop, 768px+)** <br>
+**Larger screens (tablet, laptop, 576px+)** <br>
 ![Stats Area Screenshot Laptop](assets/images/stats-area-laptop.jpg) <br>
 
 ### Features to implement
@@ -139,6 +139,9 @@ This was resolved by amending the value of `margin-left` from `none` to `0`.
 Since none of the warnings were unexpected or any cause for concern, no action was taken to resolve these. 
 
 #### JS
+JSHint was used to test the JavaScript file. Upon initial testing only 2 minor errors - missing semi-colons - were reported and immediately resolved. 
+The remaining warnings shown by JSHint were all regarding version requirements for assigning variables with `let` or `const`, use of template literals, and one instance of using a trailing comma in an argument. None of these warnings were any cause for concern and were therefore ignored. 
+![JS Warning Screenshot](assets/images/js-warning-screenshot.jpg) <br>
 
 ### Unfixed Bugs
 - All identified bugs were reported and resolved.
@@ -164,11 +167,12 @@ I used Project Example Idea 1 recommended within Code Institute's Portfolio Proj
 - Bootstrap structures (e.g. table, collapsible) and classes (e.g. text-center, text-md-start) were used to improve efficiency of html and css respectively. One bootstrap JS script was also used to provide functionality for the collapsible text content in the game information area. https://getbootstrap.com/docs/5.3/getting-started/introduction/.
 - Google Fonts for custom fonts used throughout site. Link to embed code used: https://fonts.googleapis.com/css2?family=Jockey+One&family=Orbitron:wght@400..900&display=swap.
 - Browser favicon was identified and downloaded from https://www.flaticon.com/.
-- Icolour pallete (https://icolorpalette.com/palette-by-themes/ski) and Coolors (https://coolors.co/) were used for inspiration for colour schemes. 
+- Icolour pallete (https://icolorpalette.com/) and Coolors (https://coolors.co/) were used for inspiration for colour schemes. 
 - Amiresponsive (https://ui.dev/amiresponsive) was used to generate the mock-up image for the readme. 
 - Balsamiq Wireframes (https://balsamiq.com/) was used extensively during planning to guide the structure and layout of the website. 
-- W3C HTML Validator (https://validator.w3.org/#validate_by_input) was utilised extensively during testing.
-- W3C CSS Validator (https://jigsaw.w3.org/css-validator/#validate_by_input) was also used during testing.
+- W3C HTML Validator (https://validator.w3.org/) was used for testing HTML.
+- W3C CSS Validator (https://jigsaw.w3.org/css-validator/) was used for testing CSS.
+- JSHint Validator (https://jshint.com/) was used for testing JavaScript.
 - Autoprefixer (https://autoprefixer.github.io/) was used to ensure portability of styles across different browsers. 
 - Used contrast checker (https://webaim.org/resources/contrastchecker/) to check the viability of the colour scheme. 
 
