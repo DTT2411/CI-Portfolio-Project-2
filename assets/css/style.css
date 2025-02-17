@@ -79,6 +79,7 @@ header {
     width: 250px;
     margin: auto;
     padding: 15px;
+    position: relative;
 }
 
 .label {
