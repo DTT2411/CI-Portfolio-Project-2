@@ -1,6 +1,6 @@
 # Rock Paper Scissors Lizard Spock
 
-## Project Description [UPDATE REQUIRED]
+## Project Description
 Rock Paper Scissors Lizard Spock (RPSLS) is an extension of the classic game, "Rock Paper Scissors" - the addition of two new symbols, Lizard and Spock, and their respective rules, make winning outcomes more likely! 
 
 This application will allow the user to play games of RPSLS against the computer which will pick one of the five symbols randomly to play against you. It's a great way to learn how the game works and have a truly random opponent - versus other humans who might have preferences, or strategies.
@@ -71,7 +71,7 @@ The design of the game area is responsive, with smaller buttons to fit across mo
 **Larger screens (tablet, laptop, 768px+)** <br>
 ![Game Area Screenshot Laptop](assets/images/game-area-laptop.jpg) <br>
 
-#### 6. Stats Area [UPDATE REQUIRED]
+#### 6. Stats Area
 The stats area includes the section title followed by a table of various statistics based on the user's past interactions with the game. 
 
 **Smaller screens (mobile, small tablet, up to 576px)** <br>
@@ -110,14 +110,14 @@ Bugs resolved during manual testing:
 ### Automated Testing
 Lighthouse testing was conducted on the deployed page with the following results.
 Intial lighthouse test reported an accessibility issue - I did not add `name` attributes to the choice buttons, which makes them difficult to use for users with screen readers. <br>
-![Lighthouse Error Screenshot](assets/images/lighthouse-error.jpg)
+![Lighthouse Error Screenshot](assets/images/lighthouse-error.jpg) <br>
+This was resolved by adding names identical to the IDs (e.g. `rock`, `paper`) to the button elements. After retesting with lighthouse, no further errors were found. <br>
 
-This was resolved by adding names identical to the IDs (e.g. `rock`, `paper`) to the button elements. After retesting with lighthouse, no further errors were found. 
+A minor performance warning was highlighted but this was due to calling key resources e.g. Bootstrap, Google Fonts, FontAwesome and was therefore ignored. <br>
+![Lighthouse Warning Screenshot](assets/images/lighthouse-warning.jpg) <br>
 
-**Lighthouse testing results** 
-
-
-![Lighthouse Test Screenshot](assets/images/lighthouse-test.jpg)
+Final testing on the deployed project returned satisfactory scores for all aspects, as indicated by the screenshot below. <br>
+![Lighthouse Test Screenshot](assets/images/lighthouse-test.jpg) <br>
 
 ### Validator Testing
 The CI-recommended W3C validators were utilised for automated testing of each file within the project.
