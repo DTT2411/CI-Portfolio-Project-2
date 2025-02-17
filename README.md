@@ -119,7 +119,7 @@ This was resolved by adding names identical to the IDs (e.g. `rock`, `paper`) to
 
 ![Lighthouse Test Screenshot](assets/images/lighthouse-test.jpg)
 
-### Validator Testing [UPDATE REQUIRED]
+### Validator Testing
 The CI-recommended W3C validators were utilised for automated testing of each file within the project.
 
 #### HTML
@@ -132,7 +132,7 @@ No warnings or errors reported. <br>
 This was resolved by amending the value of `margin-left` from `none` to `0`.
 
 2 warnings were reported.<br>
-![CSS Warnings Screenshot](assets/images/css-validator-warning.jpg) <br>
+![CSS Warning Screenshot](assets/images/css-validator-warning.jpg) <br>
 2 - Highlights Google Fonts library as external so cannot be checked, can be safely ignored <br>
 16 - Pertains to use of CSS variables, can be safely ignored <br>
 
@@ -141,7 +141,7 @@ Since none of the warnings were unexpected or any cause for concern, no action w
 #### JS
 
 ### Unfixed Bugs
-- All bugs found were resolved.
+- All identified bugs were reported and resolved.
 
 ### Deployment
 The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -156,6 +156,9 @@ The direct link to the deployed page can be found here - https://dtt2411.github.
 
 ### Concept
 I used Project Example Idea 1 recommended within Code Institute's Portfolio Project 2 Assessment Guide: https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+JSE_PAGPPF+2021_Q2/courseware/30137de05cd847d1a6b6d2c7338c4655/c3bd296fe9d643af86e76e830e1470dd/
+
+### Code
+- I got the idea of applying a class to rotate the arrow next to the description and rules drop-down sections from a stackoverflow thread: https://stackoverflow.com/questions/73831348/put-and-change-arrow-with-collapsible-div-css. Specifically, I used the line `transform: rotateX(-180deg);` in my own style rule on ln42, style.css.
 
 ### Content
 - Bootstrap structures (e.g. table, collapsible) and classes (e.g. text-center, text-md-start) were used to improve efficiency of html and css respectively. One bootstrap JS script was also used to provide functionality for the collapsible text content in the game information area. https://getbootstrap.com/docs/5.3/getting-started/introduction/.
