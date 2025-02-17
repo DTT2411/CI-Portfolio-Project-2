@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Google Font import */
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Orbitron:wght@400..900&display=swap');
 
@@ -18,7 +25,8 @@ body {
     color: var(--tertiary-color);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-size: 0.8rem;
 }
 
@@ -32,7 +40,8 @@ body {
 
 /* This class is applied to arrows next to drop-down menu on click so they invert */
 .rotate {
-    transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
 }
 
 /* Removes default bullet points and padding from list items */
