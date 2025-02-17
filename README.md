@@ -7,10 +7,12 @@ The application allows users to play games of RPSLS against the computer, which 
 
 The application is great for someone looking to learn about the original Rock Paper Scissors game and impress others with their knowledge about this extended version. With the addition of the stats table, it can also help users develop their understanding of probability and keep track of their wins, winrate and other statistics.
 
+Deployed Project link: https://dtt2411.github.io/CI-Portfolio-Project-2/
+
 ![Website Mockup Screenshot](assets/images/mockup.jpg) 
 
 
-## Wireframes
+## User Interface & Planning
 Balsamiq Wireframes software was used during the planning process to establish a general structure the game page. 
 
 Significant changes between the structure indicated in the wireframes versus the end product include:
@@ -26,6 +28,19 @@ Significant changes between the structure indicated in the wireframes versus the
 **Laptop+** <br>
 ![Balsamiq Laptop Screenshot](assets/images/wireframe-laptop.jpg)
 
+## User Stories
+- As a player, I want to play an online game that has elements of chance for the purpose of entertainment. 
+- As a player, I want to be able to play on any device, including mobile, tablet and laptop since I use different devices regularly. 
+- As a player, I want to be able to keep track of my score versus the computer, so that I can monitor my progress and see any stand-out statistics.
+- As a player, I require a concise description of the game and its rules, so that I can learn how to play quickly and easily. 
+- As a player, I require a clear visual anbd verbal representation of the game state and outcome, so that I can quickly understand the outcome of each game.
+
+## User Requirements
+- The user requires an application which allows user to play concurrent RPSLS games versus a computer making a random choice. 
+- The application must be designed in a mobie-first, responsive way. 
+- A clear score counter for the user and computer must be displayed prominently on screen. 
+- A brief description and list of the winning conditions for RPSLS must be featured within the application. 
+- Game outcomes should be made clear with images corresponding to the choices made by the user and computer in the most recent game, along with a message clarifying the outcome. 
 
 ## Features
 
@@ -89,7 +104,7 @@ The stats area includes the section title followed by a table of various statist
 
 2. **"Reset" button:** This would be a minor quality of life improvement to allow the user to reset all stats and counters on the page, and clear the outcome display boxes and messages, without having to refresh the page. This would be relatively easy to implement with a single function in script.js to target elements in the DOM to set back to 0. 
 
-3. **Cloud data hosting:** Rather than reading values to/from the DOM, one option would be to use HTML Web Storage API to record values. While this would require a significant overhaul of the Javascript for the application, it would allow users' statistics to be saved and retained, rather than resetting every time the page is refreshed. This would also provide additional value to the reset button mentioned above which is currently redundant with the availability of refreshing. This would also be a more secure way to hold game data - currently it is very easy to "cheat" the game, which can be done by simply amending DOM values via devTools. 
+3. **Browser data hosting:** Rather than reading values to/from the DOM, one option would be to use HTML Web Storage API to record values. While this would require a significant overhaul of the Javascript for the application, it would allow users' statistics to be saved and retained, rather than resetting every time the page is refreshed. This would also provide additional value to the reset button mentioned above which is currently redundant with the availability of refreshing. This would also be a more secure way to hold game data - currently it is very easy to "cheat" the game, which can be done by simply amending DOM values via devTools. 
 
 
 ## Testing
@@ -140,13 +155,14 @@ Since none of the warnings were unexpected or any cause for concern, no action w
 
 #### JS
 JSHint was used to test the JavaScript file. Upon initial testing only 2 minor errors - missing semi-colons - were reported and immediately resolved. 
-The remaining warnings shown by JSHint were all regarding version requirements for assigning variables with `let` or `const`, use of template literals, and one instance of using a trailing comma in an argument. None of these warnings were any cause for concern and were therefore ignored. 
+The remaining warnings shown by JSHint were all regarding version requirements for assigning variables with `let` or `const`, use of template literals, and one instance of using a trailing comma in an argument. These were all resolved by stating `jshint eversion: 8` at the top of the script.js file. 
 ![JS Warning Screenshot](assets/images/js-warning-screenshot.jpg) <br>
 
 ### Unfixed Bugs
 - All identified bugs were reported and resolved.
 
-### Deployment
+
+## Deployment
 The site was deployed to GitHub pages. The steps to deploy are as follows:
 - In the GitHub repository, navigate to the Settings tab.
 - From the source section drop-down menu, select the Master Branch.
@@ -161,6 +177,7 @@ The direct link to the deployed page can be found here - https://dtt2411.github.
 - I used Project Example Idea 1 recommended within Code Institute's Portfolio Project 2 Assessment Guide: https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+JSE_PAGPPF+2021_Q2/courseware/30137de05cd847d1a6b6d2c7338c4655/c3bd296fe9d643af86e76e830e1470dd/
 
 ### Code
+- CREDIT: BUTTON EVENT LISTENER
 - I got the idea of applying a class to rotate the arrow next to the description and rules drop-down sections from a stackoverflow thread: https://stackoverflow.com/questions/73831348/put-and-change-arrow-with-collapsible-div-css. Specifically, I used the line `transform: rotateX(-180deg);` in my own style rule on ln42, style.css.
 - The exemplar project shown in the video in the Portfolio 2 > Portfolio Project Scope module was also helpful for identifying the functionality which would be required in the extended Rock Paper Scissors Lizard Spock project. https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+JSE_PAGPPF+2021_Q2/courseware/30137de05cd847d1a6b6d2c7338c4655/c3bd296fe9d643af86e76e830e1470dd/ 
 - I researched how to make he text areas of the description and rules sections "collapsible" via an icon and used a guide from W3C as my base for this functionality, although I made significant alterations. https://www.w3schools.com/howto/howto_js_collapsible.asp 

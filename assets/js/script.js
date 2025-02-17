@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 // Adds event listeners to game buttons upon DOM loading.
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
@@ -42,25 +44,20 @@ rulesCollapse.addEventListener("click", function() {
  */
 function playGame(playerChoice) {
     const computerChoice = createComputerChoice(); 
-    console.log("Player Choice: " + playerChoice); // Test console log, delete before submission
-    console.log("Computer Choice: " + computerChoice); // Test console log, delete before submission
     let winningCases = ["rockscissors","rocklizard","scissorspaper","scissorslizard","paperrock","paperspock","spockscissors","spockrock","lizardspock","lizardpaper"];
     let losingCases = ["scissorsrock","lizardrock","paperscissors","lizardscissors","rockpaper","spockpaper","scissorsspock","rockspock","spocklizard","paperlizard"];
     // The following if-else statements compare the combined string of player & computer choices with the above arrays to determine the game outcome
     if (winningCases.includes(playerChoice + computerChoice)) { 
-        console.log("User wins!"); // Test console log, delete before submission
         winGame(playerChoice, computerChoice); // Calls the winGame function with populated player & computer choice parameters
         incrementCurrentWinstreak(); // Calls the function to increase current winstreak by 1
         checkMaxWinstreak(); // Calls the function to check whether the current winstreak is greater than the previous maximum
         incrementStats(playerChoice);
         incrementTotalGames("win");
     } else if (losingCases.includes(playerChoice + computerChoice)) {
-        console.log("User loses!"); // Test console log, delete before submission
         loseGame(playerChoice, computerChoice); // Calls the loseGame function with populated player & computer choice parameters
         resetCurrentWinstreak(); // Calls the function to reset the winstreak since player lost
         incrementTotalGames("loss");
     } else {
-        console.log("Draw!"); // Test console log, delete before submission
         drawGame(playerChoice); // Calls the draw Game function with populated player parameter (only need 1, since both are the same)
         resetCurrentWinstreak(); // Calls the function to reset the winstreak since player drew
         incrementTotalGames("draw");
@@ -82,10 +79,8 @@ function createComputerChoice() {
  * Updates winning game outcome message and calls the function to increase player score.
  */
 function winGame(playerChoice, computerChoice) {
-    console.log(`${playerChoice} beats ${computerChoice} - you win!`); // Test console log, delete before submission
     // Creates a new string with capitalised first letter to display as the first word in the outcome message
     let playerChoiceCapitalised = playerChoice[0].toUpperCase() + playerChoice.slice(1,); 
-    // console.log(playerChoiceCapitalised); // Test log, delete before submission
     document.getElementById("game-outcome").textContent = `${playerChoiceCapitalised} beats ${computerChoice} - you win!`; 
     incrementPlayerScore(); //Calls function to increase player score
 }
@@ -94,10 +89,8 @@ function winGame(playerChoice, computerChoice) {
  * Updates losing game outcome message and calls the function to increase computer score.
  */
 function loseGame(playerChoice, computerChoice) {
-    console.log(`${computerChoice} beats ${playerChoice} - you lose!`); // Test log, delete before submission
     // Creates a new string with capitalised first letter to display as the first word in the outcome message
     let playerChoiceCapitalised = playerChoice[0].toUpperCase() + playerChoice.slice(1,); 
-    // console.log(playerChoiceCapitalised); // Test log, delete before submission
     document.getElementById("game-outcome").textContent = `${playerChoiceCapitalised} is beaten by ${computerChoice} - you lose!`;
     incrementComputerScore(); //Calls function to increase computer score
 }
@@ -106,7 +99,6 @@ function loseGame(playerChoice, computerChoice) {
  * Updates drawn game outcome.
  */
 function drawGame(playerChoice) {
-    console.log(`You both picked ${playerChoice} - it's a draw!`); // Test log, delete before submission
     document.getElementById("game-outcome").textContent = `You both picked ${playerChoice} - it's a draw!`;
 }
 

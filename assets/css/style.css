@@ -39,6 +39,7 @@ body {
 }
 
 /* This class is applied to arrows next to drop-down menu on click so they invert */
+/* Credit: https://stackoverflow.com/questions/73831348/put-and-change-arrow-with-collapsible-div-css */
 .rotate {
     -webkit-transform: rotateX(-180deg);
             transform: rotateX(-180deg);
