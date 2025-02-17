@@ -9,10 +9,6 @@ The application is great for someone looking to learn about the original Rock Pa
 
 ![Website Mockup Screenshot](assets/images/mockup.jpg) 
 
-## Project Principles [UPDATE REQUIRED]
-1. **Mobile-first development:** The website has been designed with responsiveness in mind. All elements and structures were first created to fit mobile screens, with additional styling and classes to ensure responsiveness on larger screens. This is particularly important with a small and simple application such as this, as it is well suited for mobile interaction. 
-2. **Accessibility:** Code used within the project is compliant with best practice for accessibility. The application is also intentionally designed to utilise icons over images which will ensure rapid loading.
-
 
 ## Wireframes
 Balsamiq Wireframes software was used during the planning process to establish a general structure the game page. 
@@ -75,7 +71,6 @@ The design of the game area is responsive, with smaller buttons to fit across mo
 **Larger screens (tablet, laptop, 768px+)** <br>
 ![Game Area Screenshot Laptop](assets/images/game-area-laptop.jpg) <br>
 
-
 #### 6. Stats Area [UPDATE REQUIRED]
 The stats area includes the section title followed by a table of various statistics based on the user's past interactions with the game. 
 
@@ -84,7 +79,6 @@ The stats area includes the section title followed by a table of various statist
 
 **Larger screens (tablet, laptop, 768px+)** <br>
 ![Stats Area Screenshot Laptop](assets/images/stats-area-laptop.jpg) <br>
-
 
 ### Features to implement
 1. **Development of "Stats" section:** The stats table is functional but could be expanded/improved in several ways:
@@ -96,6 +90,7 @@ The stats area includes the section title followed by a table of various statist
 2. **"Reset" button:** This would be a minor quality of life improvement to allow the user to reset all stats and counters on the page, and clear the outcome display boxes and messages, without having to refresh the page. This would be relatively easy to implement with a single function in script.js to target elements in the DOM to set back to 0. 
 
 3. **Cloud data hosting:** Rather than reading values to/from the DOM, one option would be to use HTML Web Storage API to record values. While this would require a significant overhaul of the Javascript for the application, it would allow users' statistics to be saved and retained, rather than resetting every time the page is refreshed. This would also provide additional value to the reset button mentioned above which is currently redundant with the availability of refreshing. This would also be a more secure way to hold game data - currently it is very easy to "cheat" the game, which can be done by simply amending DOM values via devTools. 
+
 
 ## Testing
 Testing was conducted throughout the development cycle of the project, using the deployed version of the website as this was deployed at a very early stage. DevTools was utilised extensively to facilitate the testing of the site's responsiveness on different screen sizes (phone, tablet, laptop, desktop) in accordance with industry standard breakpoints (https://getbootstrap.com/docs/5.3/layout/breakpoints/#available-breakpoints).
@@ -112,10 +107,8 @@ Bugs resolved during manual testing:
 `let roundedTotalWinrate = Math.round(totalWinrate*100);`
 - Identified several minor text/label alignment issues in the outcome area which were resolved with amendments to custom CSS.
 
-
-### Automated Testing [UPDATE REQUIRED]
+### Automated Testing
 Lighthouse testing was conducted on the deployed page with the following results.
-
 
 During lighthouse testing of the booking form page, an accessibility issue was identified - specifically, the contrast between the labels and background was not high enough for normal text. This was resolved by lightening the secondary colour, creating greater contrast. Upon retesting with lighthouse in the same section, the issue was seen to be resolved. 
 
@@ -128,14 +121,14 @@ During lighthouse testing of the booking form page, an accessibility issue was i
 Homepage: No errors.
 
 #### CSS
-No bugs reported.
-5 warnings were reported.<br>
-![CSS Warnings Screenshot](assets/screenshots/screenshot-css-warnings.png) <br>
-10 - Highlights Google Fonts library as external so cannot be checked, can be safely ignored <br>
-24 - Pertains to use of CSS variables, can be safely ignored <br>
-29 - Pertains to use of CSS variables, can be safely ignored <br>
-102 - Result from autoprefixer, can be safely ignored <br>
-103 - Result from autoprefixer, can be safely ignored <br>
+1 error was reported upon intial testing: <br>
+![CSS Error Screenshot](assets/images/css-validator-error.jpg) <br>
+This was resolved by amending the value of `margin-left` from `none` to `0`.
+
+2 warnings were reported.<br>
+![CSS Warnings Screenshot](assets/images/css-validator-warning.jpg) <br>
+2 - Highlights Google Fonts library as external so cannot be checked, can be safely ignored <br>
+16 - Pertains to use of CSS variables, can be safely ignored <br>
 
 Since none of the warnings were unexpected or any cause for concern, no action was taken to resolve these. 
 
@@ -152,7 +145,8 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 
 The direct link to the deployed page can be found here - https://dtt2411.github.io/CI-Portfolio-Project-2/.
 
-## Credits [UPDATE REQUIRED]
+
+## Credits
 
 ### Concept
 I used Project Example Idea 1 recommended within Code Institute's Portfolio Project 2 Assessment Guide: https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+JSE_PAGPPF+2021_Q2/courseware/30137de05cd847d1a6b6d2c7338c4655/c3bd296fe9d643af86e76e830e1470dd/
@@ -160,7 +154,7 @@ I used Project Example Idea 1 recommended within Code Institute's Portfolio Proj
 ### Content
 - Bootstrap structures (e.g. table, collapsible) and classes (e.g. text-center, text-md-start) were used to improve efficiency of html and css respectively. One bootstrap JS script was also used to provide functionality for the collapsible text content in the game information area. https://getbootstrap.com/docs/5.3/getting-started/introduction/.
 - Google Fonts for custom fonts used throughout site. Link to embed code used: https://fonts.googleapis.com/css2?family=Jockey+One&family=Orbitron:wght@400..900&display=swap.
-- Browser favicons were identified and downloaded from https://www.flaticon.com/. A Favicon converter (https://favicon.io/favicon-converter/) was used to create appropriately sized icons for different screen sizes.
+- Browser favicon was identified and downloaded from https://www.flaticon.com/.
 - Icolour pallete (https://icolorpalette.com/palette-by-themes/ski) and Coolors (https://coolors.co/) were used for inspiration for colour schemes. 
 - Amiresponsive (https://ui.dev/amiresponsive) was used to generate the mock-up image for the readme. 
 - Balsamiq Wireframes (https://balsamiq.com/) was used extensively during planning to guide the structure and layout of the website. 

@@ -70,7 +70,6 @@ header {
     width: 250px;
     margin: auto;
     padding: 15px;
-    position: relative;
 }
 
 .label {
@@ -159,6 +158,7 @@ td {
         font-size: 1rem;
     }
 
+    /* Increase button size on larger screens */
     button {
         width: 100px;
         height: 150px;
@@ -193,7 +193,7 @@ td {
     .outcome {
         width: 200px;
         height: 200px;
-        margin-left: none;
+        margin-left: 0;
     }
 
     .outcome h2 {
