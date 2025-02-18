@@ -11,7 +11,6 @@
 /* CSS Variables */
 :root {
     --primary-font: "Orbitron", sans-serif;
-    --secondary-font: "Jockey One", cursive;
     --primary-color: #4B644A;
     --secondary-color: #ADFCF9;
     --tertiary-color: #89A894;
@@ -197,6 +196,7 @@ td {
 
     /* OUTCOME AREA */
 
+    /* Following rules make game display elements larger on tablet+ screens */
     #game-outcome {
         font-size: 1.5rem;
     }
@@ -234,6 +234,7 @@ td {
 
     /* STATS AREA */
 
+    /* Widens table for larger screens */
     table {
         width: 400px;
     }
