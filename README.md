@@ -185,7 +185,7 @@ The direct link to the deployed page can be found here - https://dtt2411.github.
 ### Content
 - Bootstrap structures (e.g. table, collapsible) and classes (e.g. text-center, text-md-start) were used to improve efficiency of html and css respectively. https://getbootstrap.com/docs/5.3/getting-started/introduction/.
 - Google Fonts for custom fonts used throughout site. Link to embed code used: https://fonts.googleapis.com/css2?family=Jockey+One&family=Orbitron:wght@400..900&display=swap.
-- Browser favicon (https://www.flaticon.com/) was used to identify and download icons.
+- Flaticon (https://www.flaticon.com/) was used to source browser icons.
 - Icolour pallete (https://icolorpalette.com/) and Coolors (https://coolors.co/) were used for inspiration for colour schemes. 
 - Amiresponsive (https://ui.dev/amiresponsive) was used to generate the mock-up image for the readme. 
 - Balsamiq Wireframes (https://balsamiq.com/) was used extensively during planning to guide the structure and layout of the website. 
